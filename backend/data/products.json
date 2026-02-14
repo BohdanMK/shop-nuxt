@@ -1,0 +1,1821 @@
+[
+  {
+    "id": "philadelphia-salmon",
+    "title": "Філадельфія лосось",
+    "description": "Один з найсмачніших ролів з лососем.",
+    "image": {
+      "src": "/images/product/product.png",
+      "alt": "product"
+    },
+    "isOnSale": true,
+    "salePrice": 170,
+    "weightGrams": 285,
+    "components": [
+      {
+        "name": "Рис",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Лосось",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      }
+    ],
+    "price": {
+      "amount": 200,
+      "currency": "UAH"
+    },
+    "ctaLabel": "До кошика",
+    "categoryId": {
+      "$oid": "69349b20ec4c5c7dfa002549"
+    },
+    "categoryName": "Роли",
+    "subCategoryId": {
+      "$oid": "6934beb7ec4c5c7dfa002554"
+    },
+    "subCategoryName": "Філадельфія"
+  },
+  {
+    "id": "philadelphia-classic",
+    "title": "Філадельфія класична",
+    "description": "Класичний рол з лососем та сиром.",
+    "image": {
+      "src": "/images/product/product.png",
+      "alt": "product"
+    },
+    "isOnSale": false,
+    "weightGrams": 260,
+    "components": [
+      {
+        "name": "Рис",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Лосось",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      }
+    ],
+    "price": {
+      "amount": 190,
+      "currency": "UAH"
+    },
+    "ctaLabel": "До кошика",
+    "categoryId": {
+      "$oid": "69349b20ec4c5c7dfa002549"
+    },
+    "categoryName": "Роли",
+    "subCategoryId": {
+      "$oid": "6934beb7ec4c5c7dfa002554"
+    },
+    "subCategoryName": "Філадельфія"
+  },
+  {
+    "id": "california-crab",
+    "title": "Каліфорнія краб",
+    "description": "Рол з крабом, авокадо та огірком.",
+    "image": {
+      "src": "/images/product/product.png",
+      "alt": "product"
+    },
+    "isOnSale": false,
+    "weightGrams": 250,
+    "components": [
+      {
+        "name": "Рис",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Лосось",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      }
+    ],
+    "price": {
+      "amount": 180,
+      "currency": "UAH"
+    },
+    "ctaLabel": "До кошика",
+    "categoryId": {
+      "$oid": "69349b20ec4c5c7dfa002549"
+    },
+    "categoryName": "Роли",
+    "subCategoryId": {
+      "$oid": "6934beb7ec4c5c7dfa002555"
+    },
+    "subCategoryName": "Каліфорнія"
+  },
+  {
+    "id": "california-shrimp",
+    "title": "Каліфорнія креветка",
+    "description": "Рол з креветкою в ікрі тобіко.",
+    "image": {
+      "src": "/images/product/product.png",
+      "alt": "product"
+    },
+    "isOnSale": false,
+    "weightGrams": 260,
+    "components": [
+      {
+        "name": "Рис",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Лосось",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      }
+    ],
+    "price": {
+      "amount": 195,
+      "currency": "UAH"
+    },
+    "ctaLabel": "До кошика",
+    "categoryId": {
+      "$oid": "69349b20ec4c5c7dfa002549"
+    },
+    "categoryName": "Роли",
+    "subCategoryId": {
+      "$oid": "6934beb7ec4c5c7dfa002555"
+    },
+    "subCategoryName": "Каліфорнія"
+  },
+  {
+    "id": "dragon-eel",
+    "title": "Дракон вугор",
+    "description": "Рол з вугрем та соусом унагі.",
+    "image": {
+      "src": "/images/product/product.png",
+      "alt": "product"
+    },
+    "isOnSale": false,
+    "weightGrams": 300,
+    "components": [
+      {
+        "name": "Рис",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Лосось",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      }
+    ],
+    "price": {
+      "amount": 230,
+      "currency": "UAH"
+    },
+    "ctaLabel": "До кошика",
+    "categoryId": {
+      "$oid": "69349b20ec4c5c7dfa002549"
+    },
+    "categoryName": "Роли",
+    "subCategoryId": {
+      "$oid": "6934beb7ec4c5c7dfa002556"
+    },
+    "subCategoryName": "Дракон"
+  },
+  {
+    "id": "dragon-salmon",
+    "title": "Дракон лосось",
+    "description": "Запечений рол з лососем.",
+    "image": {
+      "src": "/images/product/product.png",
+      "alt": "product"
+    },
+    "isOnSale": false,
+    "weightGrams": 320,
+    "components": [
+      {
+        "name": "Рис",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Лосось",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      }
+    ],
+    "price": {
+      "amount": 240,
+      "currency": "UAH"
+    },
+    "ctaLabel": "До кошика",
+    "categoryId": {
+      "$oid": "69349b20ec4c5c7dfa002549"
+    },
+    "categoryName": "Роли",
+    "subCategoryId": {
+      "$oid": "6934beb7ec4c5c7dfa002556"
+    },
+    "subCategoryName": "Дракон"
+  },
+
+  {
+    "id": "duet-set",
+    "title": "Сет Дует класичний",
+    "description": "Набір з двох улюблених ролів.",
+    "image": {
+      "src": "/images/product/product.png",
+      "alt": "product"
+    },
+    "isOnSale": true,
+    "salePrice": 390,
+    "weightGrams": 800,
+    "components": [
+      {
+        "name": "Рис",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Лосось",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Тунець",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      }
+    ],
+    "price": {
+      "amount": 450,
+      "currency": "UAH"
+    },
+    "ctaLabel": "До кошика",
+    "categoryId": {
+      "$oid": "69349b20ec4c5c7dfa00254a"
+    },
+    "categoryName": "Сети",
+    "subCategoryId": {
+      "$oid": "6934beb7ec4c5c7dfa002557"
+    },
+    "subCategoryName": "Сет Дует"
+  },
+  {
+    "id": "duet-set-premium",
+    "title": "Сет Дует преміум",
+    "description": "Розширений сет для двох.",
+    "image": {
+      "src": "/images/product/product.png",
+      "alt": "product"
+    },
+    "isOnSale": false,
+    "weightGrams": 1000,
+    "components": [
+      {
+        "name": "Рис",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Лосось",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Тунець",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      }
+    ],
+    "price": {
+      "amount": 520,
+      "currency": "UAH"
+    },
+    "ctaLabel": "До кошика",
+    "categoryId": {
+      "$oid": "69349b20ec4c5c7dfa00254a"
+    },
+    "categoryName": "Сети",
+    "subCategoryId": {
+      "$oid": "6934beb7ec4c5c7dfa002557"
+    },
+    "subCategoryName": "Сет Дует"
+  },
+  {
+    "id": "favorite-set",
+    "title": "Сет Фаворит",
+    "description": "Найпопулярніші роли в одному наборі.",
+    "image": {
+      "src": "/images/product/product.png",
+      "alt": "product"
+    },
+    "isOnSale": false,
+    "weightGrams": 1200,
+    "components": [
+      {
+        "name": "Рис",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Лосось",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Тунець",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      }
+    ],
+    "price": {
+      "amount": 600,
+      "currency": "UAH"
+    },
+    "ctaLabel": "До кошика",
+    "categoryId": {
+      "$oid": "69349b20ec4c5c7dfa00254a"
+    },
+    "categoryName": "Сети",
+    "subCategoryId": {
+      "$oid": "6934beb7ec4c5c7dfa002558"
+    },
+    "subCategoryName": "Сет Фаворит"
+  },
+  {
+    "id": "favorite-set-big",
+    "title": "Сет Фаворит XL",
+    "description": "Великий сет для компанії.",
+    "image": {
+      "src": "/images/product/product.png",
+      "alt": "product"
+    },
+    "isOnSale": false,
+    "weightGrams": 1600,
+    "components": [
+      {
+        "name": "Рис",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Лосось",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Тунець",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      }
+    ],
+    "price": {
+      "amount": 820,
+      "currency": "UAH"
+    },
+    "ctaLabel": "До кошика",
+    "categoryId": {
+      "$oid": "69349b20ec4c5c7dfa00254a"
+    },
+    "categoryName": "Сети",
+    "subCategoryId": {
+      "$oid": "6934beb7ec4c5c7dfa002558"
+    },
+    "subCategoryName": "Сет Фаворит"
+  },
+  {
+    "id": "salmon-set",
+    "title": "Сет Лосось",
+    "description": "Сет з ролами з лососем.",
+    "image": {
+      "src": "/images/product/product.png",
+      "alt": "product"
+    },
+    "isOnSale": false,
+    "weightGrams": 1100,
+    "components": [
+      {
+        "name": "Рис",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Лосось",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Тунець",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      }
+    ],
+    "price": {
+      "amount": 580,
+      "currency": "UAH"
+    },
+    "ctaLabel": "До кошика",
+    "categoryId": {
+      "$oid": "69349b20ec4c5c7dfa00254a"
+    },
+    "categoryName": "Сети",
+    "subCategoryId": {
+      "$oid": "6934beb7ec4c5c7dfa002559"
+    },
+    "subCategoryName": "Сет Лосось"
+  },
+  {
+    "id": "salmon-set-family",
+    "title": "Сет Лосось сімейний",
+    "description": "Сімейний набір з лососем.",
+    "image": {
+      "src": "/images/product/product.png",
+      "alt": "product"
+    },
+    "isOnSale": false,
+    "weightGrams": 1800,
+    "components": [
+      {
+        "name": "Рис",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Лосось",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Тунець",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      }
+    ],
+    "price": {
+      "amount": 990,
+      "currency": "UAH"
+    },
+    "ctaLabel": "До кошика",
+    "categoryId": {
+      "$oid": "69349b20ec4c5c7dfa00254a"
+    },
+    "categoryName": "Сети",
+    "subCategoryId": {
+      "$oid": "6934beb7ec4c5c7dfa002559"
+    },
+    "subCategoryName": "Сет Лосось"
+  },
+
+  {
+    "id": "salmon-nigiri",
+    "title": "Нігірі лосось",
+    "description": "Класичне нігірі з лососем.",
+    "image": {
+      "src": "/images/product/product.png",
+      "alt": "product"
+    },
+    "isOnSale": true,
+    "salePrice": 90,
+    "weightGrams": 120,
+    "components": [
+      {
+        "name": "Рис",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Норі",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      }
+    ],
+    "price": {
+      "amount": 110,
+      "currency": "UAH"
+    },
+    "ctaLabel": "До кошика",
+    "categoryId": {
+      "$oid": "69349b20ec4c5c7dfa00254b"
+    },
+    "categoryName": "Суші",
+    "subCategoryId": {
+      "$oid": "6934beb7ec4c5c7dfa00255a"
+    },
+    "subCategoryName": "Суші з лососем"
+  },
+  {
+    "id": "salmon-sushi-set",
+    "title": "Сет суші лосось",
+    "description": "Набір суші з лососем.",
+    "image": {
+      "src": "/images/product/product.png",
+      "alt": "product"
+    },
+    "isOnSale": false,
+    "weightGrams": 300,
+    "components": [
+      {
+        "name": "Рис",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Норі",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      }
+    ],
+    "price": {
+      "amount": 260,
+      "currency": "UAH"
+    },
+    "ctaLabel": "До кошика",
+    "categoryId": {
+      "$oid": "69349b20ec4c5c7dfa00254b"
+    },
+    "categoryName": "Суші",
+    "subCategoryId": {
+      "$oid": "6934beb7ec4c5c7dfa00255a"
+    },
+    "subCategoryName": "Суші з лососем"
+  },
+  {
+    "id": "tuna-nigiri",
+    "title": "Нігірі тунець",
+    "description": "Ніжне нігірі з тунцем.",
+    "image": {
+      "src": "/images/product/product.png",
+      "alt": "product"
+    },
+    "isOnSale": false,
+    "weightGrams": 120,
+    "components": [
+      {
+        "name": "Рис",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Норі",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      }
+    ],
+    "price": {
+      "amount": 115,
+      "currency": "UAH"
+    },
+    "ctaLabel": "До кошика",
+    "categoryId": {
+      "$oid": "69349b20ec4c5c7dfa00254b"
+    },
+    "categoryName": "Суші",
+    "subCategoryId": {
+      "$oid": "6934beb7ec4c5c7dfa00255b"
+    },
+    "subCategoryName": "Суші з тунцем"
+  },
+  {
+    "id": "tuna-sushi-set",
+    "title": "Сет суші тунець",
+    "description": "Набір суші з тунцем.",
+    "image": {
+      "src": "/images/product/product.png",
+      "alt": "product"
+    },
+    "isOnSale": false,
+    "weightGrams": 300,
+    "components": [
+      {
+        "name": "Рис",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Норі",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      }
+    ],
+    "price": {
+      "amount": 270,
+      "currency": "UAH"
+    },
+    "ctaLabel": "До кошика",
+    "categoryId": {
+      "$oid": "69349b20ec4c5c7dfa00254b"
+    },
+    "categoryName": "Суші",
+    "subCategoryId": {
+      "$oid": "6934beb7ec4c5c7dfa00255b"
+    },
+    "subCategoryName": "Суші з тунцем"
+  },
+  {
+    "id": "unagi-nigiri",
+    "title": "Нігірі унагі",
+    "description": "Смачне нігірі з вугрем.",
+    "image": {
+      "src": "/images/product/product.png",
+      "alt": "product"
+    },
+    "isOnSale": false,
+    "weightGrams": 130,
+    "components": [
+      {
+        "name": "Рис",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Норі",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      }
+    ],
+    "price": {
+      "amount": 130,
+      "currency": "UAH"
+    },
+    "ctaLabel": "До кошика",
+    "categoryId": {
+      "$oid": "69349b20ec4c5c7dfa00254b"
+    },
+    "categoryName": "Суші",
+    "subCategoryId": {
+      "$oid": "6934beb7ec4c5c7dfa00255c"
+    },
+    "subCategoryName": "Унагі суші"
+  },
+  {
+    "id": "unagi-sushi-set",
+    "title": "Сет суші унагі",
+    "description": "Набір суші з вугрем.",
+    "image": {
+      "src": "/images/product/product.png",
+      "alt": "product"
+    },
+    "isOnSale": false,
+    "weightGrams": 320,
+    "components": [
+      {
+        "name": "Рис",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Норі",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      }
+    ],
+    "price": {
+      "amount": 290,
+      "currency": "UAH"
+    },
+    "ctaLabel": "До кошика",
+    "categoryId": {
+      "$oid": "69349b20ec4c5c7dfa00254b"
+    },
+    "categoryName": "Суші",
+    "subCategoryId": {
+      "$oid": "6934beb7ec4c5c7dfa00255c"
+    },
+    "subCategoryName": "Унагі суші"
+  },
+
+  {
+    "id": "udon-classic",
+    "title": "Удон класичний",
+    "description": "Лапша удон з овочами.",
+    "image": {
+      "src": "/images/product/product.png",
+      "alt": "product"
+    },
+    "isOnSale": true,
+    "salePrice": 190,
+    "weightGrams": 400,
+    "components": [
+      {
+        "name": "Курка",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Соус",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Овочі",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      }
+    ],
+    "price": {
+      "amount": 220,
+      "currency": "UAH"
+    },
+    "ctaLabel": "До кошика",
+    "categoryId": {
+      "$oid": "69349b20ec4c5c7dfa00254c"
+    },
+    "categoryName": "Гарячі страви",
+    "subCategoryId": {
+      "$oid": "6934beb7ec4c5c7dfa00255d"
+    },
+    "subCategoryName": "Лапша удон"
+  },
+  {
+    "id": "udon-chicken",
+    "title": "Удон з куркою",
+    "description": "Лапша удон з куркою та овочами.",
+    "image": {
+      "src": "/images/product/product.png",
+      "alt": "product"
+    },
+    "isOnSale": false,
+    "weightGrams": 420,
+    "components": [
+      {
+        "name": "Курка",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Соус",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Овочі",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      }
+    ],
+    "price": {
+      "amount": 240,
+      "currency": "UAH"
+    },
+    "ctaLabel": "До кошика",
+    "categoryId": {
+      "$oid": "69349b20ec4c5c7dfa00254c"
+    },
+    "categoryName": "Гарячі страви",
+    "subCategoryId": {
+      "$oid": "6934beb7ec4c5c7dfa00255d"
+    },
+    "subCategoryName": "Лапша удон"
+  },
+  {
+    "id": "salmon-teriyaki",
+    "title": "Лосось теріякі",
+    "description": "Лосось у соусі теріякі з рисом.",
+    "image": {
+      "src": "/images/product/product.png",
+      "alt": "product"
+    },
+    "isOnSale": false,
+    "weightGrams": 350,
+    "components": [
+      {
+        "name": "Курка",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Соус",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Овочі",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      }
+    ],
+    "price": {
+      "amount": 260,
+      "currency": "UAH"
+    },
+    "ctaLabel": "До кошика",
+    "categoryId": {
+      "$oid": "69349b20ec4c5c7dfa00254c"
+    },
+    "categoryName": "Гарячі страви",
+    "subCategoryId": {
+      "$oid": "6934beb7ec4c5c7dfa00255e"
+    },
+    "subCategoryName": "Лосось теріякі"
+  },
+  {
+    "id": "salmon-teriyaki-spicy",
+    "title": "Лосось теріякі гострий",
+    "description": "Гострий лосось теріякі.",
+    "image": {
+      "src": "/images/product/product.png",
+      "alt": "product"
+    },
+    "isOnSale": false,
+    "weightGrams": 360,
+    "components": [
+      {
+        "name": "Курка",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Соус",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Овочі",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      }
+    ],
+    "price": {
+      "amount": 275,
+      "currency": "UAH"
+    },
+    "ctaLabel": "До кошика",
+    "categoryId": {
+      "$oid": "69349b20ec4c5c7dfa00254c"
+    },
+    "categoryName": "Гарячі страви",
+    "subCategoryId": {
+      "$oid": "6934beb7ec4c5c7dfa00255e"
+    },
+    "subCategoryName": "Лосось теріякі"
+  },
+  {
+    "id": "crispy-chicken",
+    "title": "Курка в клярі",
+    "description": "Хрустка курка в клярі.",
+    "image": {
+      "src": "/images/product/product.png",
+      "alt": "product"
+    },
+    "isOnSale": false,
+    "weightGrams": 380,
+    "components": [
+      {
+        "name": "Курка",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Соус",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Овочі",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      }
+    ],
+    "price": {
+      "amount": 230,
+      "currency": "UAH"
+    },
+    "ctaLabel": "До кошика",
+    "categoryId": {
+      "$oid": "69349b20ec4c5c7dfa00254c"
+    },
+    "categoryName": "Гарячі страви",
+    "subCategoryId": {
+      "$oid": "6934beb7ec4c5c7dfa00255f"
+    },
+    "subCategoryName": "Курка в клярі"
+  },
+  {
+    "id": "crispy-chicken-sweet-sour",
+    "title": "Курка в кисло-солодкому соусі",
+    "description": "Курка в клярі з соусом.",
+    "image": {
+      "src": "/images/product/product.png",
+      "alt": "product"
+    },
+    "isOnSale": false,
+    "weightGrams": 390,
+    "components": [
+      {
+        "name": "Курка",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Соус",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Овочі",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      }
+    ],
+    "price": {
+      "amount": 250,
+      "currency": "UAH"
+    },
+    "ctaLabel": "До кошика",
+    "categoryId": {
+      "$oid": "69349b20ec4c5c7dfa00254c"
+    },
+    "categoryName": "Гарячі страви",
+    "subCategoryId": {
+      "$oid": "6934beb7ec4c5c7dfa00255f"
+    },
+    "subCategoryName": "Курка в клярі"
+  },
+
+  {
+    "id": "pizza-margherita",
+    "title": "Піцца Маргарита",
+    "description": "Класична піцца з томатами та сиром.",
+    "image": {
+      "src": "/images/product/product.png",
+      "alt": "product"
+    },
+    "isOnSale": true,
+    "salePrice": 180,
+    "weightGrams": 500,
+    "components": [
+      {
+        "name": "Тісто",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Сир",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Томатний соус",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      }
+    ],
+    "price": {
+      "amount": 210,
+      "currency": "UAH"
+    },
+    "ctaLabel": "До кошика",
+    "categoryId": {
+      "$oid": "69349b20ec4c5c7dfa00254d"
+    },
+    "categoryName": "Піцца",
+    "subCategoryId": {
+      "$oid": "6934beb7ec4c5c7dfa002560"
+    },
+    "subCategoryName": "Маргарита"
+  },
+  {
+    "id": "pizza-margherita-double-cheese",
+    "title": "Піцца Маргарита з подвійним сиром",
+    "description": "Багато моцарели та томатний соус.",
+    "image": {
+      "src": "/images/product/product.png",
+      "alt": "product"
+    },
+    "isOnSale": false,
+    "weightGrams": 520,
+    "components": [
+      {
+        "name": "Тісто",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Сир",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Томатний соус",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      }
+    ],
+    "price": {
+      "amount": 240,
+      "currency": "UAH"
+    },
+    "ctaLabel": "До кошика",
+    "categoryId": {
+      "$oid": "69349b20ec4c5c7dfa00254d"
+    },
+    "categoryName": "Піцца",
+    "subCategoryId": {
+      "$oid": "6934beb7ec4c5c7dfa002560"
+    },
+    "subCategoryName": "Маргарита"
+  },
+  {
+    "id": "pizza-pepperoni",
+    "title": "Піцца Пепероні",
+    "description": "Піцца з пепероні та сиром.",
+    "image": {
+      "src": "/images/product/product.png",
+      "alt": "product"
+    },
+    "isOnSale": false,
+    "weightGrams": 520,
+    "components": [
+      {
+        "name": "Тісто",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Сир",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Томатний соус",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      }
+    ],
+    "price": {
+      "amount": 260,
+      "currency": "UAH"
+    },
+    "ctaLabel": "До кошика",
+    "categoryId": {
+      "$oid": "69349b20ec4c5c7dfa00254d"
+    },
+    "categoryName": "Піцца",
+    "subCategoryId": {
+      "$oid": "6934beb7ec4c5c7dfa002561"
+    },
+    "subCategoryName": "Пепероні"
+  },
+  {
+    "id": "pizza-pepperoni-hot",
+    "title": "Піцца Пепероні гостра",
+    "description": "Гостра версія піцци Пепероні.",
+    "image": {
+      "src": "/images/product/product.png",
+      "alt": "product"
+    },
+    "isOnSale": false,
+    "weightGrams": 540,
+    "components": [
+      {
+        "name": "Тісто",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Сир",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Томатний соус",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      }
+    ],
+    "price": {
+      "amount": 280,
+      "currency": "UAH"
+    },
+    "ctaLabel": "До кошика",
+    "categoryId": {
+      "$oid": "69349b20ec4c5c7dfa00254d"
+    },
+    "categoryName": "Піцца",
+    "subCategoryId": {
+      "$oid": "6934beb7ec4c5c7dfa002561"
+    },
+    "subCategoryName": "Пепероні"
+  },
+  {
+    "id": "pizza-hawaii",
+    "title": "Піцца Гавайська",
+    "description": "Піцца з куркою та ананасами.",
+    "image": {
+      "src": "/images/product/product.png",
+      "alt": "product"
+    },
+    "isOnSale": false,
+    "weightGrams": 530,
+    "components": [
+      {
+        "name": "Тісто",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Сир",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Томатний соус",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      }
+    ],
+    "price": {
+      "amount": 250,
+      "currency": "UAH"
+    },
+    "ctaLabel": "До кошика",
+    "categoryId": {
+      "$oid": "69349b20ec4c5c7dfa00254d"
+    },
+    "categoryName": "Піцца",
+    "subCategoryId": {
+      "$oid": "6934beb7ec4c5c7dfa002562"
+    },
+    "subCategoryName": "Гавайська"
+  },
+  {
+    "id": "pizza-hawaii-bacon",
+    "title": "Піцца Гавайська з беконом",
+    "description": "Гавайська піцца з беконом.",
+    "image": {
+      "src": "/images/product/product.png",
+      "alt": "product"
+    },
+    "isOnSale": false,
+    "weightGrams": 550,
+    "components": [
+      {
+        "name": "Тісто",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Сир",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Томатний соус",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      }
+    ],
+    "price": {
+      "amount": 270,
+      "currency": "UAH"
+    },
+    "ctaLabel": "До кошика",
+    "categoryId": {
+      "$oid": "69349b20ec4c5c7dfa00254d"
+    },
+    "categoryName": "Піцца",
+    "subCategoryId": {
+      "$oid": "6934beb7ec4c5c7dfa002562"
+    },
+    "subCategoryName": "Гавайська"
+  },
+
+  {
+    "id": "salad-caesar-chicken",
+    "title": "Салат Цезар з куркою",
+    "description": "Класичний Цезар з куркою.",
+    "image": {
+      "src": "/images/product/product.png",
+      "alt": "product"
+    },
+    "isOnSale": true,
+    "salePrice": 160,
+    "weightGrams": 300,
+    "components": [
+      {
+        "name": "Огірок",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Помідор",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Салат",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      }
+    ],
+    "price": {
+      "amount": 190,
+      "currency": "UAH"
+    },
+    "ctaLabel": "До кошика",
+    "categoryId": {
+      "$oid": "69349b20ec4c5c7dfa00254e"
+    },
+    "categoryName": "Салати",
+    "subCategoryId": {
+      "$oid": "6934beb7ec4c5c7dfa002563"
+    },
+    "subCategoryName": "Цезар з куркою"
+  },
+  {
+    "id": "salad-caesar-bacon",
+    "title": "Салат Цезар з беконом",
+    "description": "Цезар з додатковим беконом.",
+    "image": {
+      "src": "/images/product/product.png",
+      "alt": "product"
+    },
+    "isOnSale": false,
+    "weightGrams": 320,
+    "components": [
+      {
+        "name": "Огірок",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Помідор",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Салат",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      }
+    ],
+    "price": {
+      "amount": 210,
+      "currency": "UAH"
+    },
+    "ctaLabel": "До кошика",
+    "categoryId": {
+      "$oid": "69349b20ec4c5c7dfa00254e"
+    },
+    "categoryName": "Салати",
+    "subCategoryId": {
+      "$oid": "6934beb7ec4c5c7dfa002563"
+    },
+    "subCategoryName": "Цезар з куркою"
+  },
+  {
+    "id": "salad-greek",
+    "title": "Салат Грецький",
+    "description": "Овочі з фетою та оливками.",
+    "image": {
+      "src": "/images/product/product.png",
+      "alt": "product"
+    },
+    "isOnSale": false,
+    "weightGrams": 280,
+    "components": [
+      {
+        "name": "Огірок",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Помідор",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Салат",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      }
+    ],
+    "price": {
+      "amount": 170,
+      "currency": "UAH"
+    },
+    "ctaLabel": "До кошика",
+    "categoryId": {
+      "$oid": "69349b20ec4c5c7dfa00254e"
+    },
+    "categoryName": "Салати",
+    "subCategoryId": {
+      "$oid": "6934beb7ec4c5c7dfa002564"
+    },
+    "subCategoryName": "Грецький салат"
+  },
+  {
+    "id": "salad-greek-big",
+    "title": "Салат Грецький великий",
+    "description": "Збільшена порція грецького салату.",
+    "image": {
+      "src": "/images/product/product.png",
+      "alt": "product"
+    },
+    "isOnSale": false,
+    "weightGrams": 350,
+    "components": [
+      {
+        "name": "Огірок",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Помідор",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Салат",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      }
+    ],
+    "price": {
+      "amount": 220,
+      "currency": "UAH"
+    },
+    "ctaLabel": "До кошика",
+    "categoryId": {
+      "$oid": "69349b20ec4c5c7dfa00254e"
+    },
+    "categoryName": "Салати",
+    "subCategoryId": {
+      "$oid": "6934beb7ec4c5c7dfa002564"
+    },
+    "subCategoryName": "Грецький салат"
+  },
+  {
+    "id": "salad-veggie",
+    "title": "Салат овочевий",
+    "description": "Легкий овочевий салат.",
+    "image": {
+      "src": "/images/product/product.png",
+      "alt": "product"
+    },
+    "isOnSale": false,
+    "weightGrams": 250,
+    "components": [
+      {
+        "name": "Огірок",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Помідор",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Салат",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      }
+    ],
+    "price": {
+      "amount": 150,
+      "currency": "UAH"
+    },
+    "ctaLabel": "До кошика",
+    "categoryId": {
+      "$oid": "69349b20ec4c5c7dfa00254e"
+    },
+    "categoryName": "Салати",
+    "subCategoryId": {
+      "$oid": "6934beb7ec4c5c7dfa002565"
+    },
+    "subCategoryName": "Овочевий салат"
+  },
+  {
+    "id": "salad-veggie-vitamin",
+    "title": "Салат вітамінний",
+    "description": "Овочевий салат з зеленню.",
+    "image": {
+      "src": "/images/product/product.png",
+      "alt": "product"
+    },
+    "isOnSale": false,
+    "weightGrams": 270,
+    "components": [
+      {
+        "name": "Огірок",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Помідор",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Салат",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      }
+    ],
+    "price": {
+      "amount": 170,
+      "currency": "UAH"
+    },
+    "ctaLabel": "До кошика",
+    "categoryId": {
+      "$oid": "69349b20ec4c5c7dfa00254e"
+    },
+    "categoryName": "Салати",
+    "subCategoryId": {
+      "$oid": "6934beb7ec4c5c7dfa002565"
+    },
+    "subCategoryName": "Овочевий салат"
+  },
+
+  {
+    "id": "drink-cola-05",
+    "title": "Кока-кола 0.5л",
+    "description": "Охолоджений газований напій.",
+    "image": {
+      "src": "/images/product/product.png",
+      "alt": "product"
+    },
+    "isOnSale": true,
+    "salePrice": 30,
+    "weightGrams": 500,
+    "components": [
+      {
+        "name": "Напій",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      }
+    ],
+    "price": {
+      "amount": 40,
+      "currency": "UAH"
+    },
+    "ctaLabel": "До кошика",
+    "categoryId": {
+      "$oid": "69349b20ec4c5c7dfa00254f"
+    },
+    "categoryName": "Напої",
+    "subCategoryId": {
+      "$oid": "6934beb7ec4c5c7dfa002566"
+    },
+    "subCategoryName": "Кока-кола"
+  },
+  {
+    "id": "drink-cola-1",
+    "title": "Кока-кола 1л",
+    "description": "Напій для компанії.",
+    "image": {
+      "src": "/images/product/product.png",
+      "alt": "product"
+    },
+    "isOnSale": false,
+    "weightGrams": 1000,
+    "components": [
+      {
+        "name": "Напій",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      }
+    ],
+    "price": {
+      "amount": 60,
+      "currency": "UAH"
+    },
+    "ctaLabel": "До кошика",
+    "categoryId": {
+      "$oid": "69349b20ec4c5c7dfa00254f"
+    },
+    "categoryName": "Напої",
+    "subCategoryId": {
+      "$oid": "6934beb7ec4c5c7dfa002566"
+    },
+    "subCategoryName": "Кока-кола"
+  },
+  {
+    "id": "drink-fanta-05",
+    "title": "Фанта 0.5л",
+    "description": "Апельсиновий газований напій.",
+    "image": {
+      "src": "/images/product/product.png",
+      "alt": "product"
+    },
+    "isOnSale": false,
+    "weightGrams": 500,
+    "components": [
+      {
+        "name": "Напій",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      }
+    ],
+    "price": {
+      "amount": 40,
+      "currency": "UAH"
+    },
+    "ctaLabel": "До кошика",
+    "categoryId": {
+      "$oid": "69349b20ec4c5c7dfa00254f"
+    },
+    "categoryName": "Напої",
+    "subCategoryId": {
+      "$oid": "6934beb7ec4c5c7dfa002567"
+    },
+    "subCategoryName": "Фанта"
+  },
+  {
+    "id": "drink-fanta-1",
+    "title": "Фанта 1л",
+    "description": "Апельсиновий напій для компанії.",
+    "image": {
+      "src": "/images/product/product.png",
+      "alt": "product"
+    },
+    "isOnSale": false,
+    "weightGrams": 1000,
+    "components": [
+      {
+        "name": "Напій",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      }
+    ],
+    "price": {
+      "amount": 60,
+      "currency": "UAH"
+    },
+    "ctaLabel": "До кошика",
+    "categoryId": {
+      "$oid": "69349b20ec4c5c7dfa00254f"
+    },
+    "categoryName": "Напої",
+    "subCategoryId": {
+      "$oid": "6934beb7ec4c5c7dfa002567"
+    },
+    "subCategoryName": "Фанта"
+  },
+  {
+    "id": "drink-water-05",
+    "title": "Моршинська 0.5л",
+    "description": "Мінеральна вода без газу.",
+    "image": {
+      "src": "/images/product/product.png",
+      "alt": "product"
+    },
+    "isOnSale": false,
+    "weightGrams": 500,
+    "components": [
+      {
+        "name": "Напій",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      }
+    ],
+    "price": {
+      "amount": 30,
+      "currency": "UAH"
+    },
+    "ctaLabel": "До кошика",
+    "categoryId": {
+      "$oid": "69349b20ec4c5c7dfa00254f"
+    },
+    "categoryName": "Напої",
+    "subCategoryId": {
+      "$oid": "6934beb7ec4c5c7dfa002568"
+    },
+    "subCategoryName": "Моршинська"
+  },
+  {
+    "id": "drink-water-1",
+    "title": "Моршинська 1л",
+    "description": "Мінеральна вода для компанії.",
+    "image": {
+      "src": "/images/product/product.png",
+      "alt": "product"
+    },
+    "isOnSale": false,
+    "weightGrams": 1000,
+    "components": [
+      {
+        "name": "Напій",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      }
+    ],
+    "price": {
+      "amount": 45,
+      "currency": "UAH"
+    },
+    "ctaLabel": "До кошика",
+    "categoryId": {
+      "$oid": "69349b20ec4c5c7dfa00254f"
+    },
+    "categoryName": "Напої",
+    "subCategoryId": {
+      "$oid": "6934beb7ec4c5c7dfa002568"
+    },
+    "subCategoryName": "Моршинська"
+  }
+]

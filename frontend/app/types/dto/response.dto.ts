@@ -1,0 +1,1 @@
+export type { PaginatedResponse } from '../../../../shared/dto/response.dto';

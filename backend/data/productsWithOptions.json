@@ -1,0 +1,680 @@
+[
+  {
+    "id": "philadelphia-salmon-options",
+    "title": "Філадельфія лосось (з опціями)",
+    "description": "Класичний рол Філадельфія з можливістю обрати розмір та додаткові інгредієнти.",
+    "image": {
+      "src": "/images/product/product.png",
+      "alt": "product"
+    },
+    "isOnSale": false,
+    "weightGrams": 285,
+    "components": [
+      {
+        "name": "Рис",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Лосось",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Сир вершковий",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Норі",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      }
+    ],
+    "price": {
+      "amount": 220,
+      "currency": "UAH"
+    },
+    "ctaLabel": "До кошика",
+    "optionGroups": [
+      {
+        "id": "size",
+        "name": "Розмір рола",
+        "type": "single",
+        "required": true,
+        "values": [
+          {
+            "id": "8pcs",
+            "label": "8 кусочків",
+            "extraPrice": {
+              "amount": 0,
+              "currency": "UAH"
+            }
+          },
+          {
+            "id": "12pcs",
+            "label": "12 кусочків",
+            "extraPrice": {
+              "amount": 60,
+              "currency": "UAH"
+            }
+          }
+        ]
+      },
+      {
+        "id": "extras",
+        "name": "Додатково",
+        "type": "multiple",
+        "required": false,
+        "maxSelected": 5,
+        "values": [
+          {
+            "id": "extra-salmon",
+            "label": "Додатковий лосось",
+            "extraPrice": {
+              "amount": 40,
+              "currency": "UAH"
+            }
+          },
+          {
+            "id": "extra-cheese",
+            "label": "Додатковий сир",
+            "extraPrice": {
+              "amount": 25,
+              "currency": "UAH"
+            }
+          }
+        ]
+      }
+    ],
+    "categoryId": {
+      "$oid": "69349b20ec4c5c7dfa002549"
+    },
+    "categoryName": "Роли",
+    "subCategoryId": {
+      "$oid": "6934beb7ec4c5c7dfa002554"
+    },
+    "subCategoryName": "Філадельфія"
+  },
+  {
+    "id": "duet-set-options",
+    "title": "Сет Дует (з опціями)",
+    "description": "Сет для двох із можливістю обрати додаткові роли та соуси.",
+    "image": {
+      "src": "/images/product/product.png",
+      "alt": "product"
+    },
+    "isOnSale": false,
+    "weightGrams": 900,
+    "components": [
+      {
+        "name": "Рол Філадельфія",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Рол Каліфорнія",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      }
+    ],
+    "price": {
+      "amount": 520,
+      "currency": "UAH"
+    },
+    "ctaLabel": "До кошика",
+    "optionGroups": [
+      {
+        "id": "extra-rolls",
+        "name": "Додаткові роли",
+        "type": "multiple",
+        "required": false,
+        "maxSelected": 3,
+        "values": [
+          {
+            "id": "extra-philadelphia",
+            "label": "Філадельфія",
+            "extraPrice": {
+              "amount": 200,
+              "currency": "UAH"
+            }
+          },
+          {
+            "id": "extra-california",
+            "label": "Каліфорнія",
+            "extraPrice": {
+              "amount": 180,
+              "currency": "UAH"
+            }
+          }
+        ]
+      },
+      {
+        "id": "sauces",
+        "name": "Соуси",
+        "type": "multiple",
+        "required": false,
+        "values": [
+          {
+            "id": "soy-sauce",
+            "label": "Соєвий соус",
+            "extraPrice": {
+              "amount": 15,
+              "currency": "UAH"
+            }
+          },
+          {
+            "id": "unagi-sauce",
+            "label": "Соус унагі",
+            "extraPrice": {
+              "amount": 20,
+              "currency": "UAH"
+            }
+          }
+        ]
+      }
+    ],
+    "categoryId": {
+      "$oid": "69349b20ec4c5c7dfa00254a"
+    },
+    "categoryName": "Сети",
+    "subCategoryId": {
+      "$oid": "6934beb7ec4c5c7dfa002557"
+    },
+    "subCategoryName": "Сет Дует"
+  },
+  {
+    "id": "salmon-sushi-options",
+    "title": "Суші з лососем (з опціями)",
+    "description": "Ніжні суші з лососем з вибором кількості та гостроти.",
+    "image": {
+      "src": "/images/product/product.png",
+      "alt": "product"
+    },
+    "isOnSale": false,
+    "weightGrams": 150,
+    "components": [
+      {
+        "name": "Рис",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Лосось",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      }
+    ],
+    "price": {
+      "amount": 120,
+      "currency": "UAH"
+    },
+    "ctaLabel": "До кошика",
+    "optionGroups": [
+      {
+        "id": "pieces",
+        "name": "Кількість суші",
+        "type": "single",
+        "required": true,
+        "values": [
+          {
+            "id": "2pcs",
+            "label": "2 шт.",
+            "extraPrice": {
+              "amount": 0,
+              "currency": "UAH"
+            }
+          },
+          {
+            "id": "4pcs",
+            "label": "4 шт.",
+            "extraPrice": {
+              "amount": 90,
+              "currency": "UAH"
+            }
+          }
+        ]
+      },
+      {
+        "id": "spiciness",
+        "name": "Гострота",
+        "type": "single",
+        "required": false,
+        "values": [
+          {
+            "id": "mild",
+            "label": "Не гостре",
+            "extraPrice": {
+              "amount": 0,
+              "currency": "UAH"
+            }
+          },
+          {
+            "id": "spicy",
+            "label": "Гостре",
+            "extraPrice": {
+              "amount": 10,
+              "currency": "UAH"
+            }
+          }
+        ]
+      }
+    ],
+    "categoryId": {
+      "$oid": "69349b20ec4c5c7dfa00254b"
+    },
+    "categoryName": "Суші",
+    "subCategoryId": {
+      "$oid": "6934beb7ec4c5c7dfa00255a"
+    },
+    "subCategoryName": "Суші з лососем"
+  },
+  {
+    "id": "udon-options",
+    "title": "Лапша удон (з опціями)",
+    "description": "Гаряча лапша удон з вибором мʼяса та гостроти.",
+    "image": {
+      "src": "/images/product/product.png",
+      "alt": "product"
+    },
+    "isOnSale": false,
+    "weightGrams": 420,
+    "components": [
+      {
+        "name": "Лапша удон",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Овочі",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      }
+    ],
+    "price": {
+      "amount": 230,
+      "currency": "UAH"
+    },
+    "ctaLabel": "До кошика",
+    "optionGroups": [
+      {
+        "id": "protein",
+        "name": "Додати мʼясо",
+        "type": "single",
+        "required": false,
+        "values": [
+          {
+            "id": "no-protein",
+            "label": "Без мʼяса",
+            "extraPrice": {
+              "amount": 0,
+              "currency": "UAH"
+            }
+          },
+          {
+            "id": "chicken",
+            "label": "Курка",
+            "extraPrice": {
+              "amount": 40,
+              "currency": "UAH"
+            }
+          },
+          {
+            "id": "beef",
+            "label": "Яловичина",
+            "extraPrice": {
+              "amount": 55,
+              "currency": "UAH"
+            }
+          }
+        ]
+      },
+      {
+        "id": "spiciness",
+        "name": "Гострота",
+        "type": "single",
+        "required": false,
+        "values": [
+          {
+            "id": "mild",
+            "label": "Не гостре",
+            "extraPrice": {
+              "amount": 0,
+              "currency": "UAH"
+            }
+          },
+          {
+            "id": "medium",
+            "label": "Помірно гостре",
+            "extraPrice": {
+              "amount": 5,
+              "currency": "UAH"
+            }
+          },
+          {
+            "id": "hot",
+            "label": "Дуже гостре",
+            "extraPrice": {
+              "amount": 10,
+              "currency": "UAH"
+            }
+          }
+        ]
+      }
+    ],
+    "categoryId": {
+      "$oid": "69349b20ec4c5c7dfa00254c"
+    },
+    "categoryName": "Гарячі страви",
+    "subCategoryId": {
+      "$oid": "6934beb7ec4c5c7dfa00255d"
+    },
+    "subCategoryName": "Лапша удон"
+  },
+  {
+    "id": "pizza-margherita-options",
+    "title": "Піцца Маргарита (з опціями)",
+    "description": "Класична Маргарита з вибором розміру та додаткових топінгів.",
+    "image": {
+      "src": "/images/product/product.png",
+      "alt": "product"
+    },
+    "isOnSale": false,
+    "weightGrams": 520,
+    "components": [
+      {
+        "name": "Тісто",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Сир моцарела",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Томатний соус",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      }
+    ],
+    "price": {
+      "amount": 240,
+      "currency": "UAH"
+    },
+    "ctaLabel": "До кошика",
+    "optionGroups": [
+      {
+        "id": "size",
+        "name": "Розмір",
+        "type": "single",
+        "required": true,
+        "values": [
+          {
+            "id": "30cm",
+            "label": "30 см",
+            "extraPrice": {
+              "amount": 0,
+              "currency": "UAH"
+            }
+          },
+          {
+            "id": "40cm",
+            "label": "40 см",
+            "extraPrice": {
+              "amount": 80,
+              "currency": "UAH"
+            }
+          }
+        ]
+      },
+      {
+        "id": "toppings",
+        "name": "Додаткові топінги",
+        "type": "multiple",
+        "required": false,
+        "maxSelected": 5,
+        "values": [
+          {
+            "id": "extra-cheese",
+            "label": "Додатковий сир",
+            "extraPrice": {
+              "amount": 30,
+              "currency": "UAH"
+            }
+          },
+          {
+            "id": "basil",
+            "label": "Базилік",
+            "extraPrice": {
+              "amount": 10,
+              "currency": "UAH"
+            }
+          },
+          {
+            "id": "tomato",
+            "label": "Додаткові томати",
+            "extraPrice": {
+              "amount": 15,
+              "currency": "UAH"
+            }
+          }
+        ]
+      }
+    ],
+    "categoryId": {
+      "$oid": "69349b20ec4c5c7dfa00254d"
+    },
+    "categoryName": "Піцца",
+    "subCategoryId": {
+      "$oid": "6934beb7ec4c5c7dfa002560"
+    },
+    "subCategoryName": "Маргарита"
+  },
+  {
+    "id": "salad-caesar-options",
+    "title": "Салат Цезар (з опціями)",
+    "description": "Салат Цезар з можливістю обрати додатки.",
+    "image": {
+      "src": "/images/product/product.png",
+      "alt": "product"
+    },
+    "isOnSale": false,
+    "weightGrams": 280,
+    "components": [
+      {
+        "name": "Салат ромен",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Курка гриль",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      },
+      {
+        "name": "Сир пармезан",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      }
+    ],
+    "price": {
+      "amount": 190,
+      "currency": "UAH"
+    },
+    "ctaLabel": "До кошика",
+    "optionGroups": [
+      {
+        "id": "bread",
+        "name": "Грінки",
+        "type": "single",
+        "required": false,
+        "values": [
+          {
+            "id": "no-croutons",
+            "label": "Без грінок",
+            "extraPrice": {
+              "amount": 0,
+              "currency": "UAH"
+            }
+          },
+          {
+            "id": "with-croutons",
+            "label": "З грінками",
+            "extraPrice": {
+              "amount": 15,
+              "currency": "UAH"
+            }
+          }
+        ]
+      },
+      {
+        "id": "extras",
+        "name": "Додатково",
+        "type": "multiple",
+        "required": false,
+        "values": [
+          {
+            "id": "extra-chicken",
+            "label": "Додаткова курка",
+            "extraPrice": {
+              "amount": 35,
+              "currency": "UAH"
+            }
+          },
+          {
+            "id": "extra-parmesan",
+            "label": "Додатковий пармезан",
+            "extraPrice": {
+              "amount": 25,
+              "currency": "UAH"
+            }
+          }
+        ]
+      }
+    ],
+    "categoryId": {
+      "$oid": "69349b20ec4c5c7dfa00254e"
+    },
+    "categoryName": "Салати",
+    "subCategoryId": {
+      "$oid": "6934beb7ec4c5c7dfa002563"
+    },
+    "subCategoryName": "Цезар з куркою"
+  },
+  {
+    "id": "cola-options",
+    "title": "Кока-кола (з опціями)",
+    "description": "Кока-кола з можливістю обрати обʼєм та тип охолодження.",
+    "image": {
+      "src": "/images/product/product.png",
+      "alt": "product"
+    },
+    "isOnSale": false,
+    "weightGrams": 500,
+    "components": [
+      {
+        "name": "Газований напій",
+        "image": {
+          "src": "/images/product/product.png",
+          "alt": "component"
+        }
+      }
+    ],
+    "price": {
+      "amount": 40,
+      "currency": "UAH"
+    },
+    "ctaLabel": "До кошика",
+    "optionGroups": [
+      {
+        "id": "volume",
+        "name": "Обʼєм",
+        "type": "single",
+        "required": true,
+        "values": [
+          {
+            "id": "0_5l",
+            "label": "0.5 л",
+            "extraPrice": {
+              "amount": 0,
+              "currency": "UAH"
+            }
+          },
+          {
+            "id": "1l",
+            "label": "1 л",
+            "extraPrice": {
+              "amount": 20,
+              "currency": "UAH"
+            }
+          }
+        ]
+      },
+      {
+        "id": "ice",
+        "name": "Лід",
+        "type": "single",
+        "required": false,
+        "values": [
+          {
+            "id": "no-ice",
+            "label": "Без льоду",
+            "extraPrice": {
+              "amount": 0,
+              "currency": "UAH"
+            }
+          },
+          {
+            "id": "with-ice",
+            "label": "З льодом",
+            "extraPrice": {
+              "amount": 0,
+              "currency": "UAH"
+            }
+          }
+        ]
+      }
+    ],
+    "categoryId": {
+      "$oid": "69349b20ec4c5c7dfa00254f"
+    },
+    "categoryName": "Напої",
+    "subCategoryId": {
+      "$oid": "6934beb7ec4c5c7dfa002566"
+    },
+    "subCategoryName": "Кока-кола"
+  }
+]

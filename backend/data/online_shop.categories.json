@@ -1,0 +1,56 @@
+[{
+  "_id": {
+    "$oid": "69349b20ec4c5c7dfa002549"
+  },
+  "image": "/images/categories/cat_1.png",
+  "title": "Роли",
+  "id": "cat-1"
+},
+{
+  "_id": {
+    "$oid": "69349b20ec4c5c7dfa00254a"
+  },
+  "image": "/images/categories/cat_2.png",
+  "title": "Сети",
+  "id": "cat-2"
+},
+{
+  "_id": {
+    "$oid": "69349b20ec4c5c7dfa00254b"
+  },
+  "image": "/images/categories/cat_3.png",
+  "title": "Суші",
+  "id": "cat-3"
+},
+{
+  "_id": {
+    "$oid": "69349b20ec4c5c7dfa00254c"
+  },
+  "image": "/images/categories/cat_4.png",
+  "title": "Гарячі страви",
+  "id": "cat-4"
+},
+{
+  "_id": {
+    "$oid": "69349b20ec4c5c7dfa00254d"
+  },
+  "image": "/images/categories/cat_5.png",
+  "title": "Піцца",
+  "id": "cat-5"
+},
+{
+  "_id": {
+    "$oid": "69349b20ec4c5c7dfa00254e"
+  },
+  "image": "/images/categories/cat_6.png",
+  "title": "Салати",
+  "id": "cat-6"
+},
+{
+  "_id": {
+    "$oid": "69349b20ec4c5c7dfa00254f"
+  },
+  "image": "/images/categories/cat_7.png",
+  "title": "Напої",
+  "id": "cat-7"
+}]

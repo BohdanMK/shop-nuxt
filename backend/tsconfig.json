@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    // File Layout
+    // Allow compiling shared DTOs which live outside `src` (../shared)
+    "rootDir": "..",
+    "outDir": "dist",
+
+    // Environment Settings
+    "module": "commonjs",
+    "target": "ES2020",
+    "moduleResolution": "node",
+
+    // Для Node-проєкту:
+    "lib": ["ES2020"],
+    "types": ["node"],
+
+    // Other Outputs
+    "sourceMap": true,
+
+    // declaration-файли потрібні,
+    // тільки якщо ти робиш бібліотеку
+    // "declaration": true,
+    // "declarationMap": true,
+
+    // Stricter Typechecking Options
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "typeRoots": ["./node_modules/@types", "./src/types"],
+    // Recommended Options
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "paths": {
+      "@dto/*": ["../shared/dto/*"]
+    }
+  },
+  "include": ["src", "../shared"],
+  "exclude": ["node_modules"]
+}
