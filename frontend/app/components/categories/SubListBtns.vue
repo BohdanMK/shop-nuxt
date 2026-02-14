@@ -1,5 +1,5 @@
 <template>
-    <div v-if="!categoriesStore.subCategoriesLoading" class="w-full">
+    <div v-show="!categoriesStore.subCategoriesLoading" class="w-full mb-[18px]">
         <div class="flex flex-wrap gap-3" >
             <UButton
                 v-for="item in buttons"
@@ -15,7 +15,7 @@
             />
         </div>
     </div>
-    <USkeleton v-else class="h-8 w-22 rounded-[12px]" />
+    <USkeleton v-if="categoriesStore.subCategoriesLoading" class="h-8 w-22 rounded-[12px] mb-[18px]" />
 </template>
 
 <script setup lang="ts">

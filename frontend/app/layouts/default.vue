@@ -7,8 +7,8 @@
         <div class="flex-auto">
                 <BaseSkeletonList
                 v-if="categoriesStore.categoriesLoading"
-                :maxItems="6"
-                wrapper-class="pb-2 min-w-[1200px] "
+                :maxItems="3"
+                wrapper-class="pb-2 "
                 item-class="w-[130px] h-[70px]"
                 />
                 <CategoryList v-else/>

@@ -16,7 +16,7 @@
             wrapper-class="pb-2 min-w-[1200px] md:justify-start "
             item-class="w-[330px] h-[370px]"
         />
-        <SliderItem  title="Aкції" :products="productsStore.productsPromotions"/>
+        <SliderItem link-to="promotions" title="Aкції" :products="productsStore.productsPromotions"/>
     </div>
 </template>
 

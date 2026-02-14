@@ -4,13 +4,13 @@
             <div>
                 <div class="flex justify-between mb-[37px]">
                     <h4 class="text-white text-[24px] font-semibold">{{ props.title }}</h4>
-                    <NuxtLink  ink to="/roles" class="hover:underline">
+                    <NuxtLink   :to="linkTo" class="hover:underline">
                         <UButton label="Дивитись ще" class="rounded-[12px] text-[14px] px-[16px] py-[4px]"/>
                     </NuxtLink>
                 </div>
                    <UCarousel
                         v-slot="{ item }"
-                        auto-height
+                 
                         arrows
                         dots
                         :items="products"
@@ -40,6 +40,7 @@
     interface Props {
         title: string;
         products: ProductDTO[];
+        linkTo: string | object;
     }
 
     const props = defineProps<Props>();

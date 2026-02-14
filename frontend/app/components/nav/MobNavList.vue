@@ -9,67 +9,23 @@
         <ul class="flex flex-col gap-[9px] text-[14px]"
             :class="classForList"
         >
-            <li>
-                <NuxtLink to="/roles" class="hover:underline">
-                Роли
+
+            <li
+                v-for="(category, index) in categoriesStore.categories" :key="index"
+            >
+                <NuxtLink :to="{ name: 'categories-id', params: { id: category._id }, query: {name: category.title} }" class="hover:underline">
+                {{ category.title }}
                 </NuxtLink>
             </li>
-             <li>
-                <NuxtLink to="/roles" class="hover:underline">
-                Роли
-                </NuxtLink>
-            </li>
-             <li>
-                <NuxtLink to="/roles" class="hover:underline">
-                Роли
-                </NuxtLink>
-            </li>
-             <li>
-                <NuxtLink to="/roles" class="hover:underline">
-                Роли
-                </NuxtLink>
-            </li>
-             <li>
-                <NuxtLink to="/roles" class="hover:underline">
-                Роли
-                </NuxtLink>
-            </li>
-             <li>
-                <NuxtLink to="/roles" class="hover:underline">
-                Роли
-                </NuxtLink>
-            </li>
-            <li>
-                <NuxtLink to="/roles" class="hover:underline">
-                Роли
-                </NuxtLink>
-            </li>
-            <li>
-                <NuxtLink to="/roles" class="hover:underline">
-                Роли
-                </NuxtLink>
-            </li>
-            <li>
-                <NuxtLink to="/roles" class="hover:underline">
-                Роли
-                </NuxtLink>
-            </li>
-            <li>
-                <NuxtLink to="/roles" class="hover:underline">
-                Роли
-                </NuxtLink>
-            </li>
-            <li>
-                <NuxtLink to="/roles" class="hover:underline">
-                Роли
-                </NuxtLink>
-            </li>
-            
+
         </ul>
     </div>
 </template>
 
 <script setup lang="ts">
+    import { useCategoriesStore } from '@/stores/categories'
+
+    const categoriesStore = useCategoriesStore()
     interface Props {
         classForList?: string,
         classForTitle?: string,

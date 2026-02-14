@@ -7,7 +7,13 @@
             wrapper-class="pb-22 min-w-[1200px] md:justify-start "
             item-class="w-[330px] h-[370px]"
         />
-        <SliderItem  v-if="!productsStore.productsPromotionsLoading"  title="Акції" :products="productsStore.productsPromotions" class="mt-[33px]"/>
+        <SliderItem
+            v-if="!productsStore.productsPromotionsLoading"
+            title="Акції"
+            :products="productsStore.productsPromotions"
+            class="mt-[33px]"
+            :link-to="{ name: 'promotions' }"
+        />
         <BaseSkeletonList
             v-if="productsStore.productsLoading"
             :maxItems="4"
@@ -15,7 +21,12 @@
             item-class="w-[330px] h-[370px]"
         />
         <template v-if="productsStore?.products && productsStore?.products.length > 0">
-            <SliderItem  v-if="!productsStore.productsLoading" title="Сети" :products="productsStore.products" class="mt-[33px]"/>
+            <SliderItem
+                v-if="!productsStore.productsLoading"
+                title="Сети" :products="productsStore.products"
+                class="mt-[33px]"
+                :link-to="{ name: 'categories-id', params: { id: '69349b20ec4c5c7dfa00254a' }, query: {name: 'Сети'} }"
+            />
         </template>
 
         <LocationsBlock class="mt-[33px]"/>

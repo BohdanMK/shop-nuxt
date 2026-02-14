@@ -3,10 +3,10 @@
     <div class="container">
       <div>
         <div class="flex justify-between mb-[37px]">
-          <h4 class="text-white text-[24px] font-semibold">Роли</h4>
-          <NuxtLink ink to="/roles" class="hover:underline">
+          <h4 class="text-white text-[24px] font-semibold">Наші ресторани</h4>
+          <NuxtLink ink to="/locations" class="hover:underline">
             <UButton
-              label="Дивитись ще"
+              label="Дивитись всі"
               class="rounded-[12px] text-[14px] px-[16px] py-[4px]"
             />
           </NuxtLink>
@@ -14,7 +14,6 @@
 
         <UCarousel
           v-slot="{ item }"
-          auto-height
           arrows
           dots
           :items="locations"

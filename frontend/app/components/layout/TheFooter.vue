@@ -3,9 +3,9 @@
         <div class="container">
             <div class="flex flex-col md:flex-row items-center gap-2">
                 <div class="w-full md:w-auto flex flex-row md:flex-col justify-between items-center gap-2">
-                    <div class="w-[104px] h-[69px]">
-                        <img src="@/assets/images/mob_logo.png" alt="logo"  />
-                    </div>
+                    <NuxtLink to="/">
+                        <img src="@/assets/images/mob_logo.png" alt="logo" class="w-[104px] h-[69px]" />
+                    </NuxtLink>
                     <MobSocialList class="mt-auto hidden md:block"/>
                     <div class="text-[10px] hidden md:block">
                         © 2023

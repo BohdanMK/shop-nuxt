@@ -5,7 +5,7 @@
                 class="mb-[20px]"
                 :items="breadcrumbsData"
             />
-            <h2 class="text-[24px] font-bold">
+            <h2 class="text-[24px] font-bold mb-2">
                 {{ categoryName }}
             </h2>
             <SubListBtns class="my-[20px]" />
@@ -16,12 +16,15 @@
                 item-class="w-[330px] h-[370px]"
                 containerClass="me-auto ms-0"
             />
-            <div v-else class="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-3.5 gap-y-5 mb-[50px]">
+            <div
+                v-show="!productsStore.productsLoading || productsStore.products.length > 0"
+                class="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-3.5 gap-y-5 mb-[50px]"
+            >
                 <ProductCard
-                v-for="item in productsStore.products"
-                :key="item.id"
-                :product="item"
-                :full-width="true"
+                    v-for="item in productsStore.products"
+                    :key="item.id"
+                    :product="item"
+                    :full-width="true"
                 />
             </div>
         </div>
@@ -29,7 +32,7 @@
 </template>
 
 <script setup lang="ts">
-
+    import { computed, watch, watchEffect } from 'vue'
     import type { IBreadcrumbs } from '@/types/types'
     import type { ICategoryInfoDTO, ISubCategoriesDTO } from '@/types/dto/subCategories'
     import { useRoute } from 'vue-router'
