@@ -9,8 +9,9 @@
                 @click="changeSubCategory(item)"
                 :class="[
                     '!px-[20px] !rounded-[12px] !border-0 !before:bg-transparent',
-                    'bg-[var(--new-gray)] !text-[var(--main-black)] hover:!text-[var(--main-text-color)]',
-                    activeId === item._id && '!bg-[var(--main-red)] !text-[var(--main-text-color)]'
+                    activeId === item._id
+                        ? '!bg-[var(--main-red)] [&_[data-slot=label]]:!text-[var(--main-text-color)]'
+                        : 'bg-[var(--new-gray)] [&_[data-slot=label]]:!text-[var(--sublist-label-inactive)] hover:[&_[data-slot=label]]:!text-[var(--main-text-color)]'
                 ]"
             />
         </div>

@@ -79,7 +79,7 @@
                                     'rounded-full px-4 py-2 text-[11px] font-medium',
                                     'bg-zinc-300 text-[var(--main-black)]',
                                     'has-[[data-state=checked]]:bg-[var(--main-red)]',
-                                    'has-[[data-state=checked]]:text-white'
+                                    'has-[[data-state=checked]]:text-[var(--main-text-color)]'
                                     ].join(' '),
                                     container: 'sr-only',
                                     base: 'sr-only',
@@ -129,11 +129,14 @@
                     <div class="mb-[29px]">
                         <h5 class="text-[16px] font-bold">{{ $t('checkout.yourOrder') }}</h5>
                     </div>
-                    <div
-                        v-for="(item, index) in cartStore?.cartData?.items"
-                        :key="item._id"
-                    >
-                        <PopUpItem :item/>
+                    <div class="max-h-[400px] overflow-y-auto mb-4 scroll-area">
+                        <div
+                            v-for="(item, index) in cartStore?.cartData?.items"
+                            :key="item._id"
+                            class="mb-4"
+                        >
+                            <PopUpItem :item/>
+                        </div>
                     </div>
                     <div class="flex justify-between mb-2 mt-3">
                         <label class="text-[14px]">
@@ -198,10 +201,10 @@
             </div>
         </UForm>
         <template v-else>
-            <div v-if="checkOutStore.orderData" class="flex items-center justify-center h-[300px] text-white text-[24px] font-semibold mb-[28px]">
+            <div v-if="checkOutStore.orderData" class="flex items-center justify-center h-[300px] text-[var(--main-text-color)] text-[24px] font-semibold mb-[28px]">
                 {{ $t('checkout.orderNumber') }} № {{ checkOutStore.orderData?._id }}
             </div>
-            <div v-else class="flex items-center justify-center h-[300px] text-white text-[24px] font-semibold mb-[28px]">
+            <div v-else class="flex items-center justify-center h-[300px] text-[var(--main-text-color)] text-[24px] font-semibold mb-[28px]">
                 {{ $t('checkout.emptyCart') }}
             </div>
         </template>

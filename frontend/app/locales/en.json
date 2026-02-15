@@ -147,5 +147,8 @@
     "cities": {
         "kyiv": "Kyiv",
         "chabany": "Chabany"
+    },
+    "theme": {
+        "toggle": "Toggle theme"
     }
 }

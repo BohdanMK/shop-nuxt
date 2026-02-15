@@ -1,6 +1,6 @@
 <template>
     <div
-        class="min-h-screen flex flex-col "
+        :class="['min-h-screen flex flex-col', { scrolled: isScrolled }] "
     >
         <TheHeader />
 
@@ -29,6 +29,7 @@
     import { usePublicCategories } from '@/composables/api/useCategories'
     import { useCategoriesStore } from '@/stores/categories'
     import { useCartStore } from '@/stores/cart'
+    import { useHeaderScroll } from '@/composables/useHeaderScroll'
     import BaseSkeletonList from '@/components/ui/BaseSkeletonList.vue'
     import TheHeader from '@/components/layout/TheHeader.vue'
     import TheFooter from '@/components/layout/TheFooter.vue'
@@ -37,6 +38,8 @@
     import CheckOutPopUp from '~/components/checkOut/PopUp.vue'
 
 
+
+    const { isHidden, isScrolled } = useHeaderScroll()
 
     const categoriesStore = useCategoriesStore()
     const cartStore = useCartStore()

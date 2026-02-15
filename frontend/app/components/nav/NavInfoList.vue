@@ -2,12 +2,12 @@
     <div>
         <ul class="flex flex-wrap text-[14px] gap-[18px]">
             <li>
-                <NuxtLink to="/roles" class="hover:underline">
+                <NuxtLink to="/about" class="hover:underline">
                 {{ $t('nav.about') }}
                 </NuxtLink>
             </li>
             <li>
-                <NuxtLink to="/roles" class="hover:underline">
+                <NuxtLink to="/promotions" class="hover:underline">
                 {{ $t('nav.promotions') }}
                 </NuxtLink>
             </li>

@@ -1,6 +1,5 @@
 <template>
     <div class="pt-[15px] pb-[60px]">
-        {{ $t('hello') }}
         <ContenstSlider />
         <BaseSkeletonList
             v-if="productsStore.productsPromotionsLoading"

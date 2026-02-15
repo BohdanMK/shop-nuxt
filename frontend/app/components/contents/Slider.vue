@@ -20,10 +20,10 @@
             <div class="min-h-[300px] p-[25px] flex justify-center bg-[var(--main-slider-black)] rounded-[10px]">
             <div class="w-full flex flex-col md:flex-row items-center justify-around gap-3">
                 <div class="max-w-full lg:max-w-[700px]">
-                <h3 class="text-white text-[30px] lg:text-[45px] font-bold text-center md:text-left">
+                <h3 class="text-[var(--main-text-color)] text-[30px] lg:text-[45px] font-bold text-center md:text-left">
                     {{ item.title }}
                 </h3>
-                <p class="text-white text-[20px] lg:text-[25px] font-regular text-center md:text-left">
+                <p class="text-[var(--main-text-color)] text-[20px] lg:text-[25px] font-regular text-center md:text-left">
                     {{ item.subtitle }}
                 </p>
                 </div>

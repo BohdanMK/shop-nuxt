@@ -3,7 +3,7 @@
         <div class="container">
             <div class="max-w-[991px] mx-auto">
                 <div>
-                    <h2 class="text-white text-[24px] font-semibold mb-[28px]">{{ $t('checkout.title') }}</h2>
+                    <h2 class="text-[var(--main-text-color)] text-[24px] font-semibold mb-[28px]">{{ $t('checkout.title') }}</h2>
                 </div>
                 <div>
                     <CheckOutFormContent/>

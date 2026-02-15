@@ -48,9 +48,9 @@ export default defineAppConfig({
           variant: 'custom',
           class: {
             base: [
-              'border border-[#FF0000] text-white ',
+              'border border-[#FF0000] text-[var(--main-text-color)] ',
               'text-xs md:text-sm',
-              'hover:text-white focus-visible:text-white',
+              'hover:text-[var(--main-text-color)] focus-visible:text-[var(--main-text-color)]',
               'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF0000]'
             ]
           }
@@ -74,9 +74,9 @@ export default defineAppConfig({
           variant: 'soft',
           class: {
             base: [
-              'border border-[#FF0000] text-white bg-[var(--main-red)]',
+              'border border-[#FF0000] text-[var(--main-text-color)] bg-[var(--main-red)]',
               'text-xs md:text-sm',
-              'hover:text-white focus-visible:text-white',
+              'hover:text-[var(--main-text-color)] focus-visible:text-[var(--main-text-color)]',
               'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF0000]'
             ]
           }
@@ -91,7 +91,7 @@ export default defineAppConfig({
     select: {
       slots: {
         base: [
-          'relative group rounded-md inline-flex items-center focus:outline-none disabled:cursor-not-allowed disabled:opacity-75',
+          'relative group rounded-md inline-flex items-center focus:outline-none disabled:cursor-not-allowed disabled:opacity-75 focus:outline-none focus:ring-0 focus:ring-offset-0 focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0',
           'transition-colors'
         ],
         leading: 'absolute inset-y-0 start-0 flex items-center',
@@ -110,7 +110,7 @@ export default defineAppConfig({
         label: 'font-semibold ',
         separator: '-mx-1 my-1 h-px bg-border',
         item: [
-          'group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 text-default data-highlighted:not-data-disabled:text-white data-highlighted:not-data-disabled:before:bg-elevated/50',
+          'group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 text-default data-highlighted:not-data-disabled:text-[var(--main-text-color)] data-highlighted:not-data-disabled:before:bg-elevated/50',
           'transition-colors before:transition-colors'
         ],
         itemLeadingIcon: [
@@ -215,7 +215,7 @@ export default defineAppConfig({
           }
         },
         variant: {
-          outline: 'text-highlighted bg-transparent ring ring-inset ring-accented',
+          outline: 'text-highlighted bg-transparent ring ring-accented',
           soft: 'text-highlighted bg-elevated/50 hover:bg-elevated focus:bg-none disabled:bg-elevated/50',
           subtle: 'w-full rounded-[42px] border-0 appearance-none placeholder:text-dimmed focus:outline-none disabled:cursor-not-allowed disabled:opacity-75',
           ghost: 'text-highlighted bg-transparent hover:bg-elevated focus:bg-none disabled:bg-transparent dark:disabled:bg-transparent',
@@ -252,25 +252,25 @@ export default defineAppConfig({
           variant: [
             'outline'
           ],
-          class: 'focus:ring-2 focus:ring-inset focus:ring-primary'
+          class: 'focus:ring-2 focus:ring-primary'
         },
         {
           color: 'primary',
           variant: ['subtle'],
           // class: 'focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[var(--main-red)]'
             class: {
-              base: 'focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[var(--main-red)]',
+              base: 'focus-visible:ring-2 focus-visible:ring-[var(--main-red)]',
               viewport: 'bg-white rounded-xl shadow-lg max-h-72 overflow-y-auto p-1 space-y-1',
-              item: 'px-3 py-2 rounded-lg text-sm cursor-pointer data-highlighted:bg-[var(--main-red)] data-highlighted:text-white transition-colors',
+              item: 'px-3 py-2 rounded-lg text-sm cursor-pointer data-highlighted:bg-[var(--main-red)] data-highlighted:text-[var(--main-text-color)] transition-colors',
               itemWrapper: 'flex-1 flex flex-col min-w-0',
-              itemLabel: 'truncate font-medium focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[var(--main-red)]',
+              itemLabel: 'truncate font-medium focus-visible:ring-2 focus-visible:ring-[var(--main-red)]',
               itemDescription: 'truncate text-xs text-blue-600'
             }
         },
         {
           color: 'primary',
           highlight: true,
-          class: 'ring ring-inset ring-primary'
+          class: 'ring ring-primary'
         },
         {
           color: 'neutral',
@@ -278,12 +278,12 @@ export default defineAppConfig({
             'outline',
             'subtle'
           ],
-          class: 'focus:ring-2 focus:ring-inset focus:ring-inverted'
+          class: 'focus:ring-2 focus:ring-inverted'
         },
         {
           color: 'neutral',
           highlight: true,
-          class: 'ring ring-inset ring-inverted'
+          class: 'ring ring-inverted'
         },
         {
           leading: true,
@@ -365,8 +365,8 @@ export default defineAppConfig({
         item: 'min-w-0 shrink-0 basis-full',
         controls: '',
         arrows: '',
-        prev: 'absolute rounded-full bg-transparent text-white border-0 outline-0 ring-0 disabled:bg-transparent before:hidden hover:before:translate-x-0 focus-visible:before:translate-x-0 hover:bg-transparent active:bg-transparent',
-        next: 'absolute rounded-full bg-transparent text-white border-0 outline-0 ring-0 before:hidden hover:before:translate-x-0 focus-visible:before:translate-x-0 hover:bg-transparent active:bg-transparent disabled:bg-transparent',
+        prev: 'absolute rounded-full bg-transparent text-[var(--main-text-color)] border-0 outline-0 ring-0 disabled:bg-transparent before:hidden hover:before:translate-x-0 focus-visible:before:translate-x-0 hover:bg-transparent active:bg-transparent',
+        next: 'absolute rounded-full bg-transparent text-[var(--main-text-color)] border-0 outline-0 ring-0 before:hidden hover:before:translate-x-0 focus-visible:before:translate-x-0 hover:bg-transparent active:bg-transparent disabled:bg-transparent',
         dots: 'absolute inset-x-0 -bottom-7 flex flex-wrap items-center justify-center gap-3',
         dot: [
           'cursor-pointer size-3 bg-accented rounded-full bg-[var(--main-red-50)] data-[state=active]:bg-[var(--main-red)]' ,
@@ -398,7 +398,7 @@ export default defineAppConfig({
     tooltip: {
       slots: {
         content:
-          '!h-auto flex items-center gap-1 bg-[var(--main-black)] text-white shadow-sm rounded-sm ring ring-0 px-2.5 py-1 text-xs select-none data-[state=delayed-open]:animate-[scale-in_100ms_ease-out] data-[state=closed]:animate-[scale-out_100ms_ease-in] origin-(--reka-tooltip-content-transform-origin) pointer-events-auto',
+          '!h-auto flex items-center gap-1 bg-[var(--main-black)] text-[var(--main-text-color)] shadow-sm rounded-sm ring ring-0 px-2.5 py-1 text-xs select-none data-[state=delayed-open]:animate-[scale-in_100ms_ease-out] data-[state=closed]:animate-[scale-out_100ms_ease-in] origin-(--reka-tooltip-content-transform-origin) pointer-events-auto',
         arrow: 'fill-default',
         text: 'whitespace-normal break-words leading-snug',
         kbds:
@@ -408,7 +408,7 @@ export default defineAppConfig({
     },
     popover: {
       slots: {
-        content: '!h-auto flex items-center gap-1 bg-[var(--main-black)] text-white shadow-sm rounded-sm ring ring-0 px-2.5 py-1 text-xs select-none data-[state=delayed-open]:animate-[scale-in_100ms_ease-out] data-[state=closed]:animate-[scale-out_100ms_ease-in] origin-(--reka-tooltip-content-transform-origin) pointer-events-auto',
+        content: '!h-auto flex items-center gap-1 bg-[var(--main-black)] text-[var(--main-text-color)] shadow-sm rounded-sm ring ring-0 px-2.5 py-1 text-xs select-none data-[state=delayed-open]:animate-[scale-in_100ms_ease-out] data-[state=closed]:animate-[scale-out_100ms_ease-in] origin-(--reka-tooltip-content-transform-origin) pointer-events-auto',
         arrow: 'fill-default'
       }
     },
@@ -663,7 +663,7 @@ export default defineAppConfig({
         indicator: 'flex items-center justify-center size-4 after:bg-default after:rounded-full',
         wrapper: 'w-full flex items-center gap-2',
         label: 'ms-2 select-none  text-[inherit] font-semibold',
-        description: 'block text-white text-[12px] ms-2 mt-1'
+        description: 'block text-[var(--main-text-color)] text-[12px] ms-2 mt-1'
       },
       variants: {
         color: {
@@ -727,7 +727,7 @@ export default defineAppConfig({
         indicator: 'flex items-center justify-center size-4 after:bg-default after:rounded-full',
         wrapper: 'w-full flex items-center gap-2',
         label: 'ms-2 select-none  text-[inherit] font-semibold',
-        description: 'block text-white text-[12px] ms-2 mt-1'
+        description: 'block text-[var(--main-text-color)] text-[12px] ms-2 mt-1'
       },
       variants: {
         color: {
@@ -816,7 +816,7 @@ export default defineAppConfig({
       variants: {
         color: {
           primary: {
-            headCell: 'text-white',
+            headCell: 'text-[var(--main-text-color)]',
             cellTrigger: 'focus-visible:ring-red-600'
           },
         },
@@ -871,17 +871,17 @@ export default defineAppConfig({
             'data-[state=checked]:ring-[var(--main-red)]',
           ].join(' '),
           indicator: [
-            'flex items-center justify-center size-full text-white',
-            'data-[state=checked]:text-white',
+            'flex items-center justify-center size-full text-[var(--main-text-color)]',
+            'data-[state=checked]:text-[var(--main-text-color)]',
           ].join(' '),
           icon: 'shrink-0 size-full',
           wrapper: 'w-full',
           label: [
-            'block font-medium text-white',
+            'block font-medium text-[var(--main-text-color)]',
             'data-[state=checked]:text-[var(--main-red)]',
           ].join(' '),
 
-          description: 'max-w-[300px] text-white text-[12px] mt-1'
+          description: 'max-w-[300px] text-[var(--main-text-color)] text-[12px] mt-1'
         },
         variants: {
           color: {
@@ -937,7 +937,7 @@ export default defineAppConfig({
             'outline',
           ],
           class: [
-            'bg-transparent text-white',
+            'bg-transparent text-[var(--main-text-color)]',
             'border-none !border-0',
             'outline-none !outline-0',
             'ring-0 !ring-0',

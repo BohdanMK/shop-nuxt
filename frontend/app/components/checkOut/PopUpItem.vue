@@ -1,5 +1,5 @@
 <template>
-    <div class="pb-2 border-b border-[#FFFFFF29]">
+    <div class="pb-2 border-b border-[var(--border-muted)]">
         <div class="flex gap-2 mb-[10px]">
             <div class="w-full max-w-[85px] rounded-sm overflow-hidden">
                 <img

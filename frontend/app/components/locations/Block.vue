@@ -3,7 +3,7 @@
     <div class="container">
       <div>
         <div class="flex justify-between mb-[37px]">
-          <h4 class="text-white text-[24px] font-semibold">{{ $t('locations.ourRestaurants') }}</h4>
+          <h4 class="text-[var(--main-text-color)] text-[24px] font-semibold">{{ $t('locations.ourRestaurants') }}</h4>
           <NuxtLink ink to="/locations" class="hover:underline">
             <UButton
               :label="$t('common.viewAll')"

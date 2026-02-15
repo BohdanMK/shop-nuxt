@@ -1,7 +1,7 @@
 <template>
     <div
         :class="[
-        'w-full max-w-[305px] bg-[var(--card-black-bg)] rounded-[5px] overflow-hidden',
+        'w-full max-w-[305px] bg-[var(--card-black-bg)] rounded-[5px] overflow-hidden shadow-md/10 mb-2',
         fullWidth && 'max-w-full !h-full'
         ]"
     >
@@ -17,17 +17,17 @@
         <div class="mt-[5px] mx-[11px] pb-[15px]">
         <div class="mb-[20px]">
         <div class="hidden xs:block">
-        <UTooltip
-            :text="product.title"
-            :content="{ align: 'start', side: 'top', sideOffset: 0 }"
-            :ui="{ content: 'max-w-[250px] px-3 py-2 text-[18px]  font-medium rounded-md' }"
-            >
-            <h4 class="truncate block max-w-full text-[16px] font-black text-left cursor-pointer">
-                {{ product.title }}
-            </h4>
-        </UTooltip>
+            <UTooltip
+                :text="product.title"
+                :content="{ align: 'start', side: 'top', sideOffset: 0 }"
+                :ui="{ content: 'max-w-[250px] px-3 py-2 text-[18px]  font-medium rounded-md' }"
+                >
+                <h4 class="truncate block max-w-full text-[16px] font-black text-left cursor-pointer">
+                    {{ product.title }}
+                </h4>
+            </UTooltip>
         </div>
-        <h4 class="block xs:hidden max-w-full text-[16px] font-black text-left cursor-pointer">
+        <h4 class="block sm:hidden max-w-full text-[16px] font-black text-left cursor-pointer">
             {{ product.title }}
         </h4>
         </div>
