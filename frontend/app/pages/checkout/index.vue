@@ -3,7 +3,7 @@
         <div class="container">
             <div class="max-w-[991px] mx-auto">
                 <div>
-                    <h2 class="text-white text-[24px] font-semibold mb-[28px]">Оформлення замовлення</h2>
+                    <h2 class="text-white text-[24px] font-semibold mb-[28px]">{{ $t('checkout.title') }}</h2>
                 </div>
                 <div>
                     <CheckOutFormContent/>
@@ -16,7 +16,7 @@
             wrapper-class="pb-2 min-w-[1200px] md:justify-start "
             item-class="w-[330px] h-[370px]"
         />
-        <SliderItem link-to="promotions" title="Aкції" :products="productsStore.productsPromotions"/>
+        <SliderItem link-to="promotions" :title="$t('home.promotions')" :products="productsStore.productsPromotions"/>
     </div>
 </template>
 

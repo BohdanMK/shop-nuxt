@@ -3,12 +3,12 @@
         <ul class="flex flex-wrap text-[14px] gap-[18px]">
             <li>
                 <NuxtLink to="/roles" class="hover:underline">
-                Про нас
+                {{ $t('nav.about') }}
                 </NuxtLink>
             </li>
             <li>
                 <NuxtLink to="/roles" class="hover:underline">
-                Акції
+                {{ $t('nav.promotions') }}
                 </NuxtLink>
             </li>
         </ul>

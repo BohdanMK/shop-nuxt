@@ -1,6 +1,6 @@
 <template>
     <div class="flex gap-[12px]">
-        <h4 v-if="label">Ми в:</h4>
+        <h4 v-if="label">{{ $t('social.weAreIn') }}</h4>
         <ul>
             <a href="#">
                 <img src="@/assets/images/facebook.svg"/>

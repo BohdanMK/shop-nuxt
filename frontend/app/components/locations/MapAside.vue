@@ -16,15 +16,15 @@
         </h2>
 
         <p class="text-sm">
-          Тип:
-          {{ selectedLocation.locationType === 'restaurant' ? 'Ресторан' : 'Самовивіз' }}
+          {{ $t('locations.type') }}:
+          {{ selectedLocation.locationType === 'restaurant' ? $t('locations.typeRestaurant') : $t('locations.typePickup') }}
         </p>
 
         <p
           v-if="selectedLocation.address"
           class="text-sm"
         >
-          Адреса: {{ selectedLocation.address }}
+          {{ $t('locations.address') }}: {{ selectedLocation.address }}
         </p>
 
         <p
@@ -44,7 +44,7 @@
           v-if="selectedLocation.contactPhones && selectedLocation.contactPhones.length"
           class="text-sm mt-1 mb-3"
         >
-          <span>Телефон:</span>
+          <span>{{ $t('locations.phone') }}:</span>
 
           <a
             v-for="(phone, index) in selectedLocation.contactPhones"
@@ -61,13 +61,13 @@
         v-else
         class="text-sm text-gray-500"
       >
-        Обери локацію, щоб побачити деталі.
+        {{ $t('locations.chooseToSeeDetails') }}
       </p>
 
       <!-- Кнопка + інформація по маршруту -->
       <div>
         <UButton
-          :label="isRouting ? 'Будую маршрут...' : 'Прокласти маршрут'"
+          :label="isRouting ? $t('locations.buildingRoute') : $t('locations.buildRoute')"
           class="w-full flex items-center justify-center rounded-[42px] !text-[12px] px-[20px] py-[10px] font-bold !text-wrap"
           :disabled="!selectedLocation || isRouting"
           @click="onBuildRouteClick"
@@ -78,11 +78,11 @@
           class="mt-3 px-2 py-3 text-sm space-y-1 bg-[var(--main-red)]/30 rounded-xl"
         >
           <div>
-            <span class="font-medium">Відстань:</span>
+            <span class="font-medium">{{ $t('locations.distance') }}:</span>
             {{ routeInfo.distanceKm }} км
           </div>
           <div>
-            <span class="font-medium">Орієнтовний час у дорозі:</span>
+            <span class="font-medium">{{ $t('locations.eta') }}:</span>
             ~{{ routeInfo.durationMin }} хв
           </div>
         </div>

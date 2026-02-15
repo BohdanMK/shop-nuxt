@@ -5,12 +5,12 @@
                 <div class="flex justify-between mb-[37px]">
                     <h4 class="text-white text-[24px] font-semibold">{{ props.title }}</h4>
                     <NuxtLink   :to="linkTo" class="hover:underline">
-                        <UButton label="Дивитись ще" class="rounded-[12px] text-[14px] px-[16px] py-[4px]"/>
+                        <UButton :label="$t('common.viewMore')" class="rounded-[12px] text-[14px] px-[16px] py-[4px]"/>
                     </NuxtLink>
                 </div>
                    <UCarousel
                         v-slot="{ item }"
-                 
+
                         arrows
                         dots
                         :items="products"

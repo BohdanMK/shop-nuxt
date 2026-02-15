@@ -3,7 +3,7 @@
         <div class="flex-auto flex flex-col gap-4 overflow-y-auto mb-4 scroll-area">
             <template v-if="!cartStore?.cartData?.items || cartStore?.cartData?.items?.length === 0">
                 <div class="flex flex-col items-center justify-center h-full text-center text-[16px] font-normal text-[#FFFFFF99]">
-                    Ваш кошик порожній
+                    {{ $t('checkout.emptyCart') }}
                 </div>
 
             </template>
@@ -18,27 +18,27 @@
         </div>
         <div>
             <div class="flex justify-between mb-4 border-b border-[#FFFFFF29]">
-                <span class="text-[16px] font-normal">Сума:</span>
-                <span class="text-[16px] font-normal">{{ cartStore.totalPrice }} грн</span>
+                <span class="text-[16px] font-normal">{{ $t('checkout.sum') }}:</span>
+                <span class="text-[16px] font-normal">{{ cartStore.totalPrice }} {{ $t('common.currencyUah') }}</span>
             </div>
             <div class="flex justify-between mb-4 border-b border-[#FFFFFF29] items-end">
                 <div>
-                    <div class="text-[16px] font-normal">Доставка:</div>
+                    <div class="text-[16px] font-normal">{{ $t('checkout.delivery') }}:</div>
                     <div class="max-w-[170px] text-[12px] font-light text-[#FFFFFF99]" v-if="cartStore.finalDeliveryPrice > 0">
-                        До безкоштовної доставки
-                        залишилось {{ cartStore.cartData.totalPrice - cartStore.minimalOrderPrice }} грн
+                        {{ $t('checkout.toFreeDelivery') }}
+                        {{ $t('checkout.leftAmount', { amount: cartStore.cartData.totalPrice - cartStore.minimalOrderPrice }) }}
                     </div>
                     <!-- <div class="max-w-[170px] text-[12px] font-light text-[#FFFFFF99]" v-else>
                         Безкоштовна доставка
                     </div> -->
                 </div>
 
-                <div class="text-[16px] font-normal" v-if="cartStore.finalDeliveryPrice > 0">{{ cartStore.deliveryPrice }} грн</div>
-                <div class="text-[16px] font-normal" v-else>0 грн</div>
+                <div class="text-[16px] font-normal" v-if="cartStore.finalDeliveryPrice > 0">{{ cartStore.deliveryPrice }} {{ $t('common.currencyUah') }}</div>
+                <div class="text-[16px] font-normal" v-else>0 {{ $t('common.currencyUah') }}</div>
             </div>
             <div class="flex justify-between mb-4 border-b border-[#FFFFFF29]">
-                <span class="text-[16px] font-normal">Разом:</span>
-                <span class="text-[16px] font-normal">{{ cartStore.totalPrice }} грн</span>
+                <span class="text-[16px] font-normal">{{ $t('checkout.total') }}:</span>
+                <span class="text-[16px] font-normal">{{ cartStore.totalPrice }} {{ $t('common.currencyUah') }}</span>
             </div>
 
         </div>
@@ -48,7 +48,7 @@
                 :disabled="!cartStore?.cartData?.items || cartStore?.cartData?.items?.length === 0"
                 >
                 <UButton
-                    label="Оформити замовлення"
+                    :label="$t('checkout.placeOrder')"
                     class="w-full flex items-center justify-center rounded-[10px] !text-[16px] px-[20px] py-[20px]"
                     :disabled="!cartStore?.cartData?.items || cartStore?.cartData?.items?.length === 0"
                 />

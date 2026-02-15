@@ -45,22 +45,23 @@
     import ProductCard from '~/components/product/Card.vue'
     import BaseSkeletonList from '@/components/ui/BaseSkeletonList.vue'
 
+    const { t } = useI18n()
     const route = useRoute()
     const productsStore = useProductsStore()
     const categoriesStore = useCategoriesStore()
 
     const breadcrumbsData = computed(():IBreadcrumbs[] => [
         {
-            label: 'Home',
+            label: t('breadcrumbs.home'),
             link: true,
             to: '/'
         },
         {
-            label: 'Categories',
+            label: t('breadcrumbs.categories'),
             link: false,
         },
         {
-            label: (route.query.name as string) || 'Роли',
+            label: (route.query.name as string) || t('breadcrumbs.categoriesFallback'),
             link: false,
         },
         ...(route.query.subCategory

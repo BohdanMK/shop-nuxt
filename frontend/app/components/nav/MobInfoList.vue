@@ -4,17 +4,17 @@
             class="font-bold text-[18px] mb-[9px]"
             :class="classForTitle"
         >
-            {{ labelForTitle }}
+            {{ labelForTitle || $t('footer.pagesTitle') }}
         </h4>
         <ul class="flex flex-wrap text-[12px] gap-[26px]">
             <li>
                 <NuxtLink to="/roles" class="hover:underline">
-                Про нас
+                {{ $t('nav.about') }}
                 </NuxtLink>
             </li>
             <li>
                 <NuxtLink to="/roles" class="hover:underline">
-                Акції
+                {{ $t('nav.promotions') }}
                 </NuxtLink>
             </li>
         </ul>
@@ -28,7 +28,7 @@
         labelForTitle?: string,
     }
 
-    const { classForList = '', classForTitle = '', labelForTitle = 'Сторінки' } = defineProps<Props>()
+    const { classForList = '', classForTitle = '', labelForTitle = '' } = defineProps<Props>()
 </script>
 
 <style>

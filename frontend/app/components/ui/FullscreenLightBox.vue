@@ -46,7 +46,7 @@
                             <img
                             :src="item"
                             class="w-full h-full object-cover"
-                            :alt="`Фото ${index + 1}`"
+                            :alt="$t('gallery.photoAlt', { index: index + 1 })"
                             />
                         </button>
                         </template>

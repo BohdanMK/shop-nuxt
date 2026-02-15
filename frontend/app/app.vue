@@ -15,7 +15,7 @@
                     <div class="flex flex-col items-center gap-4">
                       <div class="h-12 w-12 rounded-full border-4 border-white/40 border-t-white animate-spin" />
                       <p class="text-white text-sm uppercase tracking-[0.2em]">
-                        Завантажуємо сторінку...
+                        {{ t('app.loadingPage') }}
                       </p>
                     </div>
                   </div>
@@ -27,6 +27,7 @@
 </template>
 
 <script setup lang="ts">
+  const { t } = useI18n()
   const { isLoading } = useLoadingIndicator()
   </script>
 

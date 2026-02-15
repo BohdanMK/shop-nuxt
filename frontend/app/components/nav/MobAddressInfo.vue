@@ -2,15 +2,15 @@
     <div class="flex justify-between items-bottom">
         <div>
             <h4 class="font-bold text-[18px] mb-[6px]">
-                Місто
+                {{ $t('locations.city') }}
             </h4>
             <a class="block w-full max-w-[145px] text-[10px] ">
-                м. Софіївска Борщаговка
-                56 12th Ave, New York, NY 10011
+                {{ $t('locations.currentCity') }}
+                {{ $t('common.addressLine') }}
             </a>
 
         </div>
-        <UButton label="Вибрати місто" />
+        <UButton :label="$t('locations.selectCity')" />
     </div>
 </template>
 

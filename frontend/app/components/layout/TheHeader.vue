@@ -10,7 +10,7 @@
             <div class="flex items-center gap-2 justify-between md:justify-start">
                 <div>
                     <NuxtLink to="/">
-                        <img src="@/assets/images/mob_logo.png" alt="logo" class="w-[104px] h-[69px]" />
+                        <img src="@/assets/images/mob_logo.png" :alt="$t('common.logoAlt')" class="w-[104px] h-[69px]" />
                     </NuxtLink>
 
                 </div>
@@ -20,7 +20,7 @@
                 <div class="flex items-center justify-center gap-[13px]">
                     <UButton
                         class="hidden md:block"
-                        label="м. Софіївска Борщаговка"
+                        :label="$t('locations.currentCity')"
                         color="custom"
                         variant="link"
                         @click="toggleVisibleCitiesPopUp()"
@@ -28,7 +28,7 @@
                     <div class="flex flex-col">
                         <PhoneSelect />
                         <span class="font-normal text-[10px]">
-                            56 12th Ave, New York, NY 10011
+                            {{ $t('common.addressLine') }}
                         </span>
                     </div>
                     <div class="block md:hidden">

@@ -3,10 +3,10 @@
     <div class="container">
       <div>
         <div class="flex justify-between mb-[37px]">
-          <h4 class="text-white text-[24px] font-semibold">Наші ресторани</h4>
+          <h4 class="text-white text-[24px] font-semibold">{{ $t('locations.ourRestaurants') }}</h4>
           <NuxtLink ink to="/locations" class="hover:underline">
             <UButton
-              label="Дивитись всі"
+              :label="$t('common.viewAll')"
               class="rounded-[12px] text-[14px] px-[16px] py-[4px]"
             />
           </NuxtLink>

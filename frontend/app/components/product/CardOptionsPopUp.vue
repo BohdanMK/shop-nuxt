@@ -107,12 +107,12 @@
                         <div class="flex items-start gap-[5px] text-[20px] font-bold">
                             {{ totalPrice }}
                             <span class="font-medium text-[12px]">
-                                {{ product.price.currency === 'UAH' ? 'грн' : product.price.currency }}
+                                {{ product.price.currency === 'UAH' ? $t('common.currencyUah') : product.price.currency }}
                             </span>
                         </div>
                         <UButton
                             variant="custom"
-                            label="Додати до кошика"
+                            :label="$t('product.addToCart')"
                             class="w-auto rounded-[12px] text-[14px] !px-[12px] py-[6px]"
                             @click="() => {
                                 cartStore.addItemToCart(

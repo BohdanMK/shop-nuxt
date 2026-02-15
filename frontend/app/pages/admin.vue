@@ -1,6 +1,6 @@
 <template>
     <div>
-        admin page
+        {{ $t('admin.page') }}
     </div>
 </template>
 

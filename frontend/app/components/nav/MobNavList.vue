@@ -4,7 +4,7 @@
             class="font-bold text-[18px] mb-[9px]"
             :class="classForTitle"
         >
-            {{ labelForTitle }}
+            {{ labelForTitle || $t('nav.catalog') }}
         </h4>
         <ul class="flex flex-col gap-[9px] text-[14px]"
             :class="classForList"
@@ -32,7 +32,7 @@
         labelForTitle?: string,
     }
 
-    const { classForList = '', classForTitle = '', labelForTitle = 'Каталог' } = defineProps<Props>()
+    const { classForList = '', classForTitle = '', labelForTitle = '' } = defineProps<Props>()
 </script>
 
 <style>

@@ -1,3 +1,151 @@
 {
-    "hello": "Hello"
+    "hello": "Hello",
+    "app": {
+        "loadingPage": "Loading page..."
+    },
+    "admin": {
+        "page": "admin page"
+    },
+    "home": {
+        "promotions": "Promotions",
+        "sets": "Sets"
+    },
+    "breadcrumbs": {
+        "home": "Home",
+        "promotions": "Promotions",
+        "categories": "Categories",
+        "categoriesFallback": "Rolls"
+    },
+    "common": {
+        "logoAlt": "logo",
+        "addressLine": "56 12th Ave, New York, NY 10011",
+        "viewAll": "View all",
+        "viewMore": "View more",
+        "details": "Details",
+        "select": "Select",
+        "show": "Show",
+        "currencyUah": "UAH"
+    },
+    "footer": {
+        "privacyPolicy": "Privacy policy",
+        "pagesTitle": "Pages",
+        "categoriesTitle": "Categories"
+    },
+    "social": {
+        "weAreIn": "We are in:"
+    },
+    "nav": {
+        "about": "About us",
+        "promotions": "Promotions",
+        "catalog": "Catalog"
+    },
+    "locations": {
+        "title": "Locations",
+        "ourRestaurants": "Our restaurants",
+        "currentCity": "Sofiivska Borshchahivka",
+        "city": "City",
+        "selectCity": "Select city",
+        "chooseLocation": "Choose location",
+        "chooseRestaurantPlaceholder": "Choose one of our restaurants",
+        "detectLocation": "Detect current location",
+        "locationAlt": "location",
+        "type": "Type",
+        "typeRestaurant": "Restaurant",
+        "typePickup": "Pickup",
+        "address": "Address",
+        "phone": "Phone",
+        "chooseToSeeDetails": "Choose a location to see details.",
+        "buildingRoute": "Building route...",
+        "buildRoute": "Build route",
+        "distance": "Distance",
+        "eta": "Estimated travel time",
+        "youAreHere": "You are here",
+        "geoNotSupported": "Browser does not support geolocation",
+        "geoFailed": "Failed to get geolocation",
+        "orsMissing": "OpenRouteService API key is missing (orsApiKey)",
+        "routingApiError": "Routing API error",
+        "noRouteResponse": "No route found in response",
+        "routeBuildError": "Failed to build route",
+        "loadingMap": "Loading map..."
+    },
+    "schedule": {
+        "orders": "Orders accepted",
+        "deliveryHours": "Delivery from 10:00 to 20:45",
+        "pickupHours": "Pickup from 10:00 to 20:45",
+        "noDaysOff": "No days off"
+    },
+    "gallery": {
+        "photoAlt": "Photo {index}"
+    },
+    "product": {
+        "composition": "Composition",
+        "weight": "Weight",
+        "ingredients": "Ingredients",
+        "toCart": "Add to cart",
+        "addToCart": "Add to cart"
+    },
+    "checkout": {
+        "title": "Checkout",
+        "cart": "Cart",
+        "emptyCart": "Your cart is empty",
+        "sum": "Sum",
+        "delivery": "Delivery",
+        "toFreeDelivery": "For free delivery left",
+        "leftAmount": "{amount} UAH",
+        "total": "Total",
+        "placeOrder": "Place order",
+        "additionalOptions": "Additional options",
+        "name": "Name",
+        "namePlaceholder": "Alex",
+        "phone": "Phone",
+        "city": "City",
+        "selectCity": "Select city",
+        "street": "Street",
+        "streetPlaceholder": "Street name",
+        "house": "House",
+        "housePlaceholder": "Building/entrance number",
+        "deliveryDate": "Delivery date",
+        "selectDate": "Select a date",
+        "deliveryTime": "Delivery time",
+        "birthdayDiscount": "I want a birthday discount",
+        "birthdayDiscountDesc": "Discount is provided with a document confirming your birthday",
+        "yourOrder": "Your order",
+        "orderSum": "Order amount",
+        "comment": "Comment",
+        "commentPlaceholder": "Comment",
+        "personsCount": "Persons count",
+        "agreePolicy": "I agree with the privacy policy",
+        "orderNow": "Order",
+        "orderNumber": "Your order number",
+        "pickupSelf": "I will pick it up",
+        "needDelivery": "Need delivery",
+        "selectTime": "Choose time",
+        "asap": "As soon as possible"
+    },
+    "validation": {
+        "nameRequired": "Name is required",
+        "phoneRequired": "Phone is required",
+        "streetRequired": "Street is required",
+        "houseRequired": "House is required",
+        "cityRequired": "Select city",
+        "agreePolicyRequired": "You need to agree with the policy"
+    },
+    "slider": {
+        "item1": {
+            "title": "VERY VERY TASTY SUSHI AND ROLLS",
+            "subtitle": "Order a promo set and get a gift. Order a promo set and get a gift."
+        },
+        "item2": {
+            "title": "ROLLS WITH UP TO 30% DISCOUNT",
+            "subtitle": "Catch great offers every day. Order online in a few clicks."
+        },
+        "item3": {
+            "title": "FREE DELIVERY",
+            "subtitle": "Get free delivery for orders from 500 UAH."
+        }
+    },
+    "cities": {
+        "kyiv": "Kyiv",
+        "chabany": "Chabany"
+    }
 }

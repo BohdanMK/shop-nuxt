@@ -6,19 +6,19 @@
                 <div class="w-full flex-[100%] md:flex-[60%]">
                     <div class="grid xs:flex gap-6 xs:gap-3 mb-[20px]">
                         <UFormField  name="name" class="w-full">
-                            <FieldChipLabel label="Ім'я" class="w-full items-start" >
-                                    <UInput placeholder="Alex" class="w-full" v-model="state.name"/>
+                            <FieldChipLabel :label="$t('checkout.name')" class="w-full items-start" >
+                                    <UInput :placeholder="$t('checkout.namePlaceholder')" class="w-full" v-model="state.name"/>
                             </FieldChipLabel>
                         </UFormField>
                         <UFormField  name="phone" class="w-full">
-                            <FieldChipLabel label="Телефон" class="w-full items-start">
+                            <FieldChipLabel :label="$t('checkout.phone')" class="w-full items-start">
                                 <UInput placeholder="+ 123 456 789 111" class="w-full" v-model="state.phone"/>
                             </FieldChipLabel>
                         </UFormField>
                     </div>
                     <div>
                         <h6 class="font-bold text-[16px] mb-[18px]">
-                            Доставка
+                            {{ $t('checkout.delivery') }}
                         </h6>
                     </div>
                     <div class="mb-[25px]">
@@ -36,7 +36,7 @@
                     </div>
                     <div class="mb-[31px]">
                         <UFormField name="cityId">
-                            <FieldChipLabel label="Місто" class="!w-full">
+                            <FieldChipLabel :label="$t('checkout.city')" class="!w-full">
                                 <USelect
                                     v-model="state.cityId"
                                     class="!w-full"
@@ -44,7 +44,7 @@
                                     variant="subtle"
                                     value-key="id"
                                     label-key="title"
-                                    placeholder="Оберіть місто"
+                                    :placeholder="$t('checkout.selectCity')"
                                     @change="handleCityChange"
                                 />
                             </FieldChipLabel>
@@ -52,13 +52,13 @@
                     </div>
                     <div class="grid xs:flex gap-6 xs:gap-3 mb-[20px]">
                         <UFormField  name="street" class="w-full">
-                            <FieldChipLabel label="Вулиця" class="w-full items-start" >
-                                    <UInput placeholder="Назва вулиці" class="w-full" v-model="state.street"/>
+                            <FieldChipLabel :label="$t('checkout.street')" class="w-full items-start" >
+                                    <UInput :placeholder="$t('checkout.streetPlaceholder')" class="w-full" v-model="state.street"/>
                             </FieldChipLabel>
                         </UFormField>
                         <UFormField  name="house" class="w-full">
-                            <FieldChipLabel label="Будинок" class="w-full items-start">
-                                <UInput placeholder="Номер будинку/підїзд" class="w-full" v-model="state.house"/>
+                            <FieldChipLabel :label="$t('checkout.house')" class="w-full items-start">
+                                <UInput :placeholder="$t('checkout.housePlaceholder')" class="w-full" v-model="state.house"/>
                             </FieldChipLabel>
                         </UFormField>
                     </div>
@@ -91,7 +91,7 @@
                     </div>
                     <div class="flex gap-3 mb-[20px]">
                         <UFormField name="date" class="w-full">
-                            <FieldChipLabel label="Дата доставки" class="w-full">
+                            <FieldChipLabel :label="$t('checkout.deliveryDate')" class="w-full">
                                 <UInputDate ref="inputDateRef"  color="error" v-model="state.date">
                                     <template #trailing>
                                     <UPopover :reference="inputDateRef?.inputsRef[3]?.$el">
@@ -99,7 +99,7 @@
                                             variant="link"
                                             size="sm"
                                             icon="i-lucide-calendar"
-                                            aria-label="Select a date"
+                                            :aria-label="$t('checkout.selectDate')"
                                             class="px-0"
                                         />
 
@@ -113,7 +113,7 @@
                         </UFormField>
 
                         <UFormField name="time" class="w-full">
-                            <FieldChipLabel label="Час доставки" class="w-full">
+                            <FieldChipLabel :label="$t('checkout.deliveryTime')" class="w-full">
                                 <UInputTime v-model="state.time" :hour-cycle="24" :default-value="defaultValue" />
                             </FieldChipLabel>
                         </UFormField>
@@ -121,13 +121,13 @@
                     </div>
                     <div>
                         <UFormField name="birthdayDiscount">
-                            <UCheckbox v-model="state.birthdayDiscount" label="Хочу знижку на день народження" description="Знижка надається за умови надання документу що підтверждує що в вас день народження"/>
+                            <UCheckbox v-model="state.birthdayDiscount" :label="$t('checkout.birthdayDiscount')" :description="$t('checkout.birthdayDiscountDesc')"/>
                         </UFormField>
                     </div>
                 </div>
                 <div class="w-full flex-[100%] md:flex-[40%]">
                     <div class="mb-[29px]">
-                        <h5 class="text-[16px] font-bold">Ваше замовлення</h5>
+                        <h5 class="text-[16px] font-bold">{{ $t('checkout.yourOrder') }}</h5>
                     </div>
                     <div
                         v-for="(item, index) in cartStore?.cartData?.items"
@@ -137,9 +137,9 @@
                     </div>
                     <div class="flex justify-between mb-2 mt-3">
                         <label class="text-[14px]">
-                            Сума замовлення
+                            {{ $t('checkout.orderSum') }}
                         </label>
-                        <span class="text-[15px] font-semibold">{{ cartStore.totalPrice }} грн</span>
+                        <span class="text-[15px] font-semibold">{{ cartStore.totalPrice }} {{ $t('common.currencyUah') }}</span>
                     </div>
                     <!-- <div class="flex justify-between  mb-2">
                         <label class="text-[14px]">
@@ -149,26 +149,26 @@
                     </div> -->
                     <div class="flex justify-between mb-[15px] pb-[26px] border-b border-b-[var(--main-gray-light)] pb-2">
                         <label class="text-[14px]">
-                            Доставка
+                            {{ $t('checkout.delivery') }}
                         </label>
-                        <span class="text-[15px] font-semibold">{{ cartStore.finalDeliveryPrice }} грн</span>
+                        <span class="text-[15px] font-semibold">{{ cartStore.finalDeliveryPrice }} {{ $t('common.currencyUah') }}</span>
                     </div>
                     <div class="flex justify-between  mb-8">
                         <label class="text-[16px] font-bold">
-                            Разом
+                            {{ $t('checkout.total') }}
                         </label>
-                        <span class="text-[15px] font-semibold">{{ totalPriceWithDelivery  }} грн</span>
+                        <span class="text-[15px] font-semibold">{{ totalPriceWithDelivery  }} {{ $t('common.currencyUah') }}</span>
                     </div>
                     <div class="mb-[15px]">
                         <UFormField name="comment">
-                            <FieldChipLabel label="Комментар" class="w-full">
-                                <UTextarea v-model="state.comment" placeholder="Alex" class="w-full"/>
+                            <FieldChipLabel :label="$t('checkout.comment')" class="w-full">
+                                <UTextarea v-model="state.comment" :placeholder="$t('checkout.commentPlaceholder')" class="w-full"/>
                             </FieldChipLabel>
                         </UFormField>
                     </div>
                     <div class="flex justify-between items-center mb-[20px]">
                         <label class="text-[14px]">
-                            Кіл-сть персон
+                            {{ $t('checkout.personsCount') }}
                         </label>
                         <UFormField name="valuePerson">
                             <UInputNumber variant="subtle"  v-model="state.valuePerson" class="!rounded-[42px] !overflow-hidden" :min="1" :max="100" >
@@ -184,13 +184,13 @@
                     </div>
                     <div class="mb-[20px]">
                         <UFormField name="agreePolicy">
-                            <UCheckbox v-model="state.agreePolicy" label="Згоден з політикою конфедеційности"/>
+                            <UCheckbox v-model="state.agreePolicy" :label="$t('checkout.agreePolicy')"/>
                         </UFormField>
                     </div>
                     <div>
                         <UButton
                             type="submit" variant="soft"
-                            label="Замовити" class="w-full flex items-center justify-center rounded-[42px] !text-[16px] px-[20px] py-[10px] font-bold"
+                            :label="$t('checkout.orderNow')" class="w-full flex items-center justify-center rounded-[42px] !text-[16px] px-[20px] py-[10px] font-bold"
                             :disabled="!cartStore?.cartData?.items || cartStore?.cartData?.items?.length === 0"
                         />
                     </div>
@@ -199,10 +199,10 @@
         </UForm>
         <template v-else>
             <div v-if="checkOutStore.orderData" class="flex items-center justify-center h-[300px] text-white text-[24px] font-semibold mb-[28px]">
-                Номер вашого замовлення № {{ checkOutStore.orderData?._id }}
+                {{ $t('checkout.orderNumber') }} № {{ checkOutStore.orderData?._id }}
             </div>
             <div v-else class="flex items-center justify-center h-[300px] text-white text-[24px] font-semibold mb-[28px]">
-                Ваш кошик порожній
+                {{ $t('checkout.emptyCart') }}
             </div>
         </template>
 
@@ -221,17 +221,18 @@
     import FieldChipLabel from '@/components/form/FieldChipLabel.vue';
     import PopUpItem from '@/components/checkOut/PopUpItem.vue'
 
+    const { t } = useI18n()
 
 
     const cartStore = useCartStore()
     const checkOutStore = useCheckOutStore()
 
     const schema = z.object({
-        name: z.string().min(1, 'Name is required'),
-        phone: z.string().min(1, 'Phone is required'),
-        street: z.string().min(1, 'Street is required'),
-        house: z.string().min(1, 'House is required'),
-        cityId: z.string().min(1, 'Оберіть місто').refine(val => val !== null, { message: 'Оберіть місто' }),
+        name: z.string().min(1, t('validation.nameRequired')),
+        phone: z.string().min(1, t('validation.phoneRequired')),
+        street: z.string().min(1, t('validation.streetRequired')),
+        house: z.string().min(1, t('validation.houseRequired')),
+        cityId: z.string().min(1, t('validation.cityRequired')).refine(val => val !== null, { message: t('validation.cityRequired') }),
         cityName: z.string().optional(),
         deliveryType: z.enum(['pickup', 'delivery']),
         deliveryTime: z.enum(['in_time', 'nearest_time']),
@@ -241,7 +242,7 @@
         comment: z.string().optional(),
         valuePerson: z.number().min(1),
         agreePolicy: z.boolean().refine(val => val === true, {
-            message: 'Потрібно погодитись з політикою'
+            message: t('validation.agreePolicyRequired')
         })
     })
 
@@ -312,20 +313,20 @@
     }
 
     const items = ref([
-        { id: 'pickup',   title: '0 грн',  description: 'Заберу сам' },
-        { id: 'delivery', title: '60 грн', description: 'Потрібна доставка' }
+        { id: 'pickup',   title: `0 ${t('common.currencyUah')}`,  description: t('checkout.pickupSelf') },
+        { id: 'delivery', title: `60 ${t('common.currencyUah')}`, description: t('checkout.needDelivery') }
     ])
 
     const itemsCities = ref([
-        { id: '1',   title: 'Київ' },
-        { id: '2', title: 'Чабани'}
+        { id: '1',   title: t('cities.kyiv') },
+        { id: '2', title: t('cities.chabany')}
     ])
 
     const inputDateRef = useTemplateRef('inputDateRef')
 
     const typeOfDeliveryTime = ref([
-        { id: 'in_time',   title: 'Обрати час' },
-        { id: 'nearest_time', title: 'Якомога швидше'}
+        { id: 'in_time',   title: t('checkout.selectTime') },
+        { id: 'nearest_time', title: t('checkout.asap')}
     ])
 
     const defaultValue = shallowRef(new Time(16, 30, 0))

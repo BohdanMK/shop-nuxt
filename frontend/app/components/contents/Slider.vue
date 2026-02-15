@@ -38,6 +38,8 @@
 </template>
 
 <script setup lang="ts">
+    const { t } = useI18n()
+
     type SlideItem = {
     title: string
     subtitle: string
@@ -46,18 +48,18 @@
 
     const items: SlideItem[] = [
     {
-        title: 'ДУУУЖЕ ДУЖЕ СМАЧНІ СУШІ ТА РОЛИ',
-        subtitle: 'Замов акційний сет та отримай подарунок. Замов акційний сет та отримай подарунок.',
+        title: t('slider.item1.title'),
+        subtitle: t('slider.item1.subtitle'),
         image: '/images/banners/home-sushi-rolls.png'
     },
     {
-        title: 'РОЛИ ЗІ ЗНИЖКОЮ ДО 30%',
-        subtitle: 'Лови вигідні пропозиції щодня. Замовляй онлайн за кілька кліків.',
+        title: t('slider.item2.title'),
+        subtitle: t('slider.item2.subtitle'),
         image: '/images/banners/promotions.png'
     },
     {
-        title: 'БЕЗКОШТОВНА ДОСТАВКА',
-        subtitle: 'Отримай безкоштовну доставку при замовленні від 500 грн.',
+        title: t('slider.item3.title'),
+        subtitle: t('slider.item3.subtitle'),
         image: '/images/banners/free-delivery-removebg-preview.png'
     }
     ]

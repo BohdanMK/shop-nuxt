@@ -15,10 +15,10 @@
                 </UButton>
                 <div class="w-full max-w-[305px] md:max-w-[405px] mx-auto bg-[var(--card-black-bg)] rounded-[5px] py-[20px] overflow-hidden">
                 <div class="flex justify-center mx-auto text-center mb-[15px]">
-                    <img src="@/assets/images/mob_logo.png" alt="logo" class="w-[104px] h-[69px]" />
+                    <img src="@/assets/images/mob_logo.png" :alt="$t('common.logoAlt')" class="w-[104px] h-[69px]" />
                 </div>
                     <h5 class="mx-auto text-center font-bold text-[16px] mb-[20px]">
-                        Оберіть місто
+                        {{ $t('locations.selectCity') }}
                     </h5>
                     <USelect
                         v-model="cityType"
@@ -27,11 +27,11 @@
                         variant="subtle"
                         value-key="id"
                         label-key="title"
-                        placeholder="Оберіть місто"
+                        :placeholder="$t('locations.selectCity')"
                     />
                     <UButton
                         variant="custom"
-                        label="Вибрати"
+                        :label="$t('common.select')"
                         class="w-auto block rounded-[12px] !text-[12px] !px-[28px] py-[6px] !ms-auto"
                     />
                 </div>

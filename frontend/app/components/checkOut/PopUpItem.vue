@@ -23,7 +23,7 @@
         <div class="flex justify-between items-center">
             <div>
                 {{ finalPrice }}
-                <span class="text-[12px]">грн</span>
+                <span class="text-[12px]">{{ $t('common.currencyUah') }}</span>
             </div>
             <div class="flex items-center gap-2">
                 <UInputNumber
@@ -53,7 +53,7 @@
         </div>
         <div v-if="item.selectedOptions.length > 0" class="flex flex-col">
             <h6 class="mt-2 font-bold text-[12px]">
-                Додаткові опції:
+                {{ $t('checkout.additionalOptions') }}:
             </h6>
             <div
                 v-for="(option, index) in item.selectedOptions"

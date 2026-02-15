@@ -6,7 +6,7 @@
                 :items="breadcrumbsData"
             />
             <h2 class="text-[24px] font-bold">
-                Aкції
+                {{ $t('home.promotions') }}
             </h2>
             <BaseSkeletonList
                 v-if="productsStore.productsPromotionsLoading && productsStore?.productsPromotions.length === 0"
@@ -41,17 +41,18 @@
     import ProductCard from '~/components/product/Card.vue'
     import BaseSkeletonList from '@/components/ui/BaseSkeletonList.vue'
 
+    const { t } = useI18n()
 
     const productsStore = useProductsStore()
 
     const breadcrumbsData = computed(():IBreadcrumbs[] => [
         {
-            label: 'Home',
+            label: t('breadcrumbs.home'),
             link: true,
             to: '/'
         },
         {
-            label: 'Promotions',
+            label: t('breadcrumbs.promotions'),
             link: false,
         },
 

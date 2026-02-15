@@ -33,13 +33,13 @@
         </div>
 
         <div class="flex justify-between text-[14px] font-regular mb-[11px]">
-            <h6>Склад:</h6>
-            <h6>Вага - {{ product.weightGrams }}г</h6>
+            <h6>{{ $t('product.composition') }}:</h6>
+            <h6>{{ $t('product.weight') }} - {{ product.weightGrams }}г</h6>
         </div>
         <div class="flex items-center gap-2 mb-[25px]">
-            <h6 class="text-[14px] font-regular">Іградієнти: {{ product?.components?.length }}</h6>
+            <h6 class="text-[14px] font-regular">{{ $t('product.ingredients') }}: {{ product?.components?.length }}</h6>
             <UPopover v-if="product?.components?.length > 0">
-                <UTooltip  text="Показати">
+                <UTooltip  :text="$t('common.show')">
                     <UButton icon="i-lucide-info" variant="link"/>
                 </UTooltip>
 
@@ -65,7 +65,7 @@
             <UButton
                 ref="addToCartButtonRef"
                 variant="custom"
-                :label="product.ctaLabel ?? 'До кошика'"
+                :label="product.ctaLabel ?? $t('product.toCart')"
                 class=" rounded-[12px] text-[14px] !px-[26px] py-[4px]"
                 @click="affterClickAction(product?.optionGroups)"
             />
@@ -75,7 +75,7 @@
             >
             {{ product.price.amount }}
                 <span class="font-medium text-[12px]">
-                    {{ product.price.currency === 'UAH' ? 'грн' : product.price.currency }}
+                    {{ product.price.currency === 'UAH' ? $t('common.currencyUah') : product.price.currency }}
                 </span>
             </div>
             <div
@@ -85,14 +85,14 @@
                 <div class="text-[16px] mt-auto text-[var(--main-red)] line-through">
                     <span class="">{{ product.price.amount }}</span>
                     <span class="font-medium text-[12px]">
-                        {{ product.price.currency === 'UAH' ? 'грн' : product.price.currency }}
+                        {{ product.price.currency === 'UAH' ? $t('common.currencyUah') : product.price.currency }}
                     </span>
                 </div>
                 <span>
                     {{ product.salePrice }}
                 </span>
                 <span class="font-medium text-[12px]">
-                    {{ product.price.currency === 'UAH' ? 'грн' : product.price.currency }}
+                    {{ product.price.currency === 'UAH' ? $t('common.currencyUah') : product.price.currency }}
                 </span>
 
             </div>

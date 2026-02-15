@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col xs:flex-row gap-[10px] items-center bg-[var(--card-black-bg)]">
     <div class="w-full xs:w-[230px] h-full">
-      <img class="w-full" :src="item.mainImg" :alt="item.name || 'location'" />
+      <img class="w-full" :src="item.mainImg" :alt="item.name || $t('locations.locationAlt')" />
     </div>
     <div class="w-full xs:w-auto flex flex-col justify-start items-start px-[10px] xs:px-[0px]">
       <h6 class="mb-[4px] text-[12px] font-regular text-start">
@@ -12,7 +12,7 @@
       </p>
       <NuxtLink :to="{ path: '/locations', query: { id: item.id } }" class="hover:underline">
         <UButton
-          label="Детальніше"
+          :label="$t('common.details')"
           class="rounded-[12px] font-normal text-[12px] !px-[0px] py-[4px] font-regular text-[var(--main-red)]"
           variant="link"
         />

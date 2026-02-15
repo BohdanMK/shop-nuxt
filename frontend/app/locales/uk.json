@@ -1,3 +1,151 @@
 {
-    "hello": "Привіт"
+    "hello": "Привіт",
+    "app": {
+        "loadingPage": "Завантажуємо сторінку..."
+    },
+    "admin": {
+        "page": "адмін сторінка"
+    },
+    "home": {
+        "promotions": "Акції",
+        "sets": "Сети"
+    },
+    "breadcrumbs": {
+        "home": "Головна",
+        "promotions": "Акції",
+        "categories": "Категорії",
+        "categoriesFallback": "Роли"
+    },
+    "common": {
+        "logoAlt": "логотип",
+        "addressLine": "56 12th Ave, New York, NY 10011",
+        "viewAll": "Дивитись всі",
+        "viewMore": "Дивитись ще",
+        "details": "Детальніше",
+        "select": "Вибрати",
+        "show": "Показати",
+        "currencyUah": "грн"
+    },
+    "footer": {
+        "privacyPolicy": "Політика конфіденційності",
+        "pagesTitle": "Сторінки",
+        "categoriesTitle": "Категорії"
+    },
+    "social": {
+        "weAreIn": "Ми в:"
+    },
+    "nav": {
+        "about": "Про нас",
+        "promotions": "Акції",
+        "catalog": "Каталог"
+    },
+    "locations": {
+        "title": "Локації",
+        "ourRestaurants": "Наші ресторани",
+        "currentCity": "м. Софіївська Борщагівка",
+        "city": "Місто",
+        "selectCity": "Оберіть місто",
+        "chooseLocation": "Оберіть локацію",
+        "chooseRestaurantPlaceholder": "Оберіть один з наших ресторанів",
+        "detectLocation": "Визначити місце розташування",
+        "locationAlt": "локація",
+        "type": "Тип",
+        "typeRestaurant": "Ресторан",
+        "typePickup": "Самовивіз",
+        "address": "Адреса",
+        "phone": "Телефон",
+        "chooseToSeeDetails": "Оберіть локацію, щоб побачити деталі.",
+        "buildingRoute": "Будую маршрут...",
+        "buildRoute": "Прокласти маршрут",
+        "distance": "Відстань",
+        "eta": "Орієнтовний час у дорозі",
+        "youAreHere": "Ви тут",
+        "geoNotSupported": "Браузер не підтримує геолокацію",
+        "geoFailed": "Не вдалося отримати геолокацію",
+        "orsMissing": "Не передано OpenRouteService API ключ (orsApiKey)",
+        "routingApiError": "Помилка API маршрутизації",
+        "noRouteResponse": "Немає маршруту у відповіді",
+        "routeBuildError": "Помилка при побудові маршруту",
+        "loadingMap": "Завантажую мапу..."
+    },
+    "schedule": {
+        "orders": "Прийом замовлень",
+        "deliveryHours": "На доставку з 10:00 до 20:45",
+        "pickupHours": "На самовивіз з 10:00 до 20:45",
+        "noDaysOff": "Без вихідних"
+    },
+    "gallery": {
+        "photoAlt": "Фото {index}"
+    },
+    "product": {
+        "composition": "Склад",
+        "weight": "Вага",
+        "ingredients": "Інгредієнти",
+        "toCart": "До кошика",
+        "addToCart": "Додати до кошика"
+    },
+    "checkout": {
+        "title": "Оформлення замовлення",
+        "cart": "Кошик",
+        "emptyCart": "Ваш кошик порожній",
+        "sum": "Сума",
+        "delivery": "Доставка",
+        "toFreeDelivery": "До безкоштовної доставки залишилось",
+        "leftAmount": "{amount} грн",
+        "total": "Разом",
+        "placeOrder": "Оформити замовлення",
+        "additionalOptions": "Додаткові опції",
+        "name": "Ім'я",
+        "namePlaceholder": "Alex",
+        "phone": "Телефон",
+        "city": "Місто",
+        "selectCity": "Оберіть місто",
+        "street": "Вулиця",
+        "streetPlaceholder": "Назва вулиці",
+        "house": "Будинок",
+        "housePlaceholder": "Номер будинку/під'їзд",
+        "deliveryDate": "Дата доставки",
+        "selectDate": "Оберіть дату",
+        "deliveryTime": "Час доставки",
+        "birthdayDiscount": "Хочу знижку на день народження",
+        "birthdayDiscountDesc": "Знижка надається за умови надання документу що підтверджує день народження",
+        "yourOrder": "Ваше замовлення",
+        "orderSum": "Сума замовлення",
+        "comment": "Коментар",
+        "commentPlaceholder": "Коментар",
+        "personsCount": "Кількість персон",
+        "agreePolicy": "Згоден з політикою конфіденційності",
+        "orderNow": "Замовити",
+        "orderNumber": "Номер вашого замовлення",
+        "pickupSelf": "Заберу сам",
+        "needDelivery": "Потрібна доставка",
+        "selectTime": "Обрати час",
+        "asap": "Якомога швидше"
+    },
+    "validation": {
+        "nameRequired": "Потрібно вказати ім'я",
+        "phoneRequired": "Потрібно вказати телефон",
+        "streetRequired": "Потрібно вказати вулицю",
+        "houseRequired": "Потрібно вказати будинок",
+        "cityRequired": "Оберіть місто",
+        "agreePolicyRequired": "Потрібно погодитись з політикою"
+    },
+    "slider": {
+        "item1": {
+            "title": "ДУУУЖЕ ДУЖЕ СМАЧНІ СУШІ ТА РОЛИ",
+            "subtitle": "Замов акційний сет та отримай подарунок. Замов акційний сет та отримай подарунок."
+        },
+        "item2": {
+            "title": "РОЛИ ЗІ ЗНИЖКОЮ ДО 30%",
+            "subtitle": "Лови вигідні пропозиції щодня. Замовляй онлайн за кілька кліків."
+        },
+        "item3": {
+            "title": "БЕЗКОШТОВНА ДОСТАВКА",
+            "subtitle": "Отримай безкоштовну доставку при замовленні від 500 грн."
+        }
+    },
+    "cities": {
+        "kyiv": "Київ",
+        "chabany": "Чабани"
+    }
 }

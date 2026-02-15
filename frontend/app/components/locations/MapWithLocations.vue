@@ -4,6 +4,8 @@ import type { Location } from '@/types/dto/locations.dto'
 import MapAside from '@/components/locations/MapAside.vue'
 import LocationsFilter from '@/components/locations/Filter.vue'
 
+const { t } = useI18n()
+
 // props
 const {
   locations,
@@ -66,7 +68,7 @@ function setUserMarker(lat: number, lng: number) {
 
   userMarker.value = L!.marker([lat, lng])
     .addTo(map.value)
-    .bindPopup('Ви тут')
+    .bindPopup(t('locations.youAreHere'))
 
   userMarker.value.openPopup()
   userCoords.value = { lat, lng }
@@ -76,7 +78,7 @@ function detectCurrentLocation() {
   routingError.value = null
 
   if (!navigator.geolocation) {
-    routingError.value = 'Браузер не підтримує геолокацію'
+    routingError.value = t('locations.geoNotSupported')
     return
   }
 
@@ -89,7 +91,7 @@ function detectCurrentLocation() {
       map.value?.flyTo([lat, lng], 14, { duration: 0.7 })
     },
     () => {
-      routingError.value = 'Не вдалося отримати геолокацію'
+      routingError.value = t('locations.geoFailed')
     }
   )
 }
@@ -101,12 +103,12 @@ async function buildRoute() {
   if (!selectedLocation.value || !map.value || !L) return
 
   if (!orsApiKey) {
-    routingError.value = 'Не передано OpenRouteService API ключ (orsApiKey)'
+    routingError.value = t('locations.orsMissing')
     return
   }
 
   if (!navigator.geolocation) {
-    routingError.value = 'Браузер не підтримує геолокацію'
+    routingError.value = t('locations.geoNotSupported')
     return
   }
 
@@ -138,13 +140,13 @@ async function buildRoute() {
         )
 
         if (!res.ok) {
-          throw new Error('Routing API error')
+          throw new Error(t('locations.routingApiError'))
         }
 
         const data = await res.json() // GeoJSON FeatureCollection
 
         if (!data || !data.features || !data.features.length) {
-          throw new Error('Немає маршруту у відповіді')
+          throw new Error(t('locations.noRouteResponse'))
         }
 
         if (routeLayer.value) {
@@ -172,14 +174,14 @@ async function buildRoute() {
           }
         }
       } catch (e: any) {
-        routingError.value = e.message || 'Помилка при побудові маршруту'
+        routingError.value = e.message || t('locations.routeBuildError')
       } finally {
         isRouting.value = false
       }
     },
     () => {
       isRouting.value = false
-      routingError.value = 'Не вдалося отримати геолокацію'
+      routingError.value = t('locations.geoFailed')
     }
   )
 }
@@ -261,7 +263,7 @@ onMounted(async () => {
   locations.forEach(loc => {
     const marker = L!.marker([loc.lat, loc.lng], { icon: locationIcon }).addTo(map.value)
     marker.bindPopup(
-      `<b>${loc.name}</b><br>${loc.locationType === 'restaurant' ? 'Ресторан' : 'Самовивіз'}`
+      `<b>${loc.name}</b><br>${loc.locationType === 'restaurant' ? t('locations.typeRestaurant') : t('locations.typePickup')}`
     )
     marker.on('click', () => {
       selectedLocationId.value = loc.id
@@ -280,7 +282,7 @@ onMounted(async () => {
   <div class="container">
     <div class="p-4 flex flex-col gap-4">
       <h2 class="text-2xl font-semibold">
-        Локації
+        {{ $t('locations.title') }}
       </h2>
 
       <div class="flex flex-col md:flex-row gap-4">
@@ -298,7 +300,7 @@ onMounted(async () => {
             />
             <template #fallback>
               <div class="w-full h-[450px] flex items-center justify-center border rounded-lg">
-                Завантажую мапу...
+                {{ $t('locations.loadingMap') }}
               </div>
             </template>
           </ClientOnly>

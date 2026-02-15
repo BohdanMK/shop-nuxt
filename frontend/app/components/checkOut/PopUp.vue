@@ -9,7 +9,7 @@
         </div>
         <template #header="{ close }">
             <div class="w-full flex items-center justify-between p-4 px-0">
-                <h2 class="text-[20px] font-normal">Кошик</h2>
+                <h2 class="text-[20px] font-normal">{{ $t('checkout.cart') }}</h2>
                 <UButton
                     class="burger-btn flex flex-col justify-center items-center w-8 h-8 gap-1.5  border-y-0 border-x border-x-[#ff0000] rounded-[5px]"
 

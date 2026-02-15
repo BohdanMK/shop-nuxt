@@ -1,6 +1,6 @@
 <template>
     <div class="max-w-md flex flex-col gap-2">
-        <FieldChipLabel label="Оберіть локацію" class="!w-full">
+        <FieldChipLabel :label="$t('locations.chooseLocation')" class="!w-full">
             <div class="flex gap-2 w-full">
             <USelect
                 v-model="innerSelectedLocationId"
@@ -9,9 +9,9 @@
                 variant="subtle"
                 value-key="id"
                 label-key="name"
-                placeholder="Оберіть один з наших ресторані"
+                :placeholder="$t('locations.chooseRestaurantPlaceholder')"
             />
-            <UTooltip text="Визначити місце розташування">
+            <UTooltip :text="$t('locations.detectLocation')">
                 <UButton
                 icon="i-heroicons-map-pin-20-solid"
                 variant="custom"

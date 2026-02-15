@@ -10,7 +10,7 @@
         />
         <SliderItem
             v-if="!productsStore.productsPromotionsLoading"
-            title="Акції"
+            :title="$t('home.promotions')"
             :products="productsStore.productsPromotions"
             class="mt-[33px]"
             :link-to="{ name: 'promotions' }"
@@ -24,9 +24,9 @@
         <template v-if="productsStore?.products && productsStore?.products.length > 0">
             <SliderItem
                 v-if="!productsStore.productsLoading"
-                title="Сети" :products="productsStore.products"
+                :title="$t('home.sets')" :products="productsStore.products"
                 class="mt-[33px]"
-                :link-to="{ name: 'categories-id', params: { id: '69349b20ec4c5c7dfa00254a' }, query: {name: 'Сети'} }"
+                :link-to="{ name: 'categories-id', params: { id: '69349b20ec4c5c7dfa00254a' }, query: {name: $t('home.sets')} }"
             />
         </template>
 
