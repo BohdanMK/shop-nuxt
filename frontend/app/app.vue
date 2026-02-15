@@ -5,6 +5,7 @@
       <UApp :tooltip="{ delayDuration: 0 }" :toaster="{ position: 'top-right' }">
         <NuxtLayout>
           <NuxtPage />
+
               <Teleport to="body">
                 <Transition name="fade">
                   <div

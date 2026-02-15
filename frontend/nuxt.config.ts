@@ -1,4 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import i18nConfig from './app/i18n/config';
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
@@ -15,7 +16,8 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxt/eslint",
     "@vite-pwa/nuxt",
-    '@pinia/nuxt'
+    '@pinia/nuxt',
+    '@nuxtjs/i18n',
   ],
 
   // Глобальні стилі (Tailwind v4 + твоя база)
@@ -105,4 +107,5 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+  i18n: i18nConfig
 });

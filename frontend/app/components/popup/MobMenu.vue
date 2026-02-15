@@ -9,21 +9,27 @@
             }"
         >
             <div class="h-full flex flex-col">
+                <div class="flex justify-end mb-3">
+                    <LangSelect/>
+                </div>
                 <MobNavList class="mb-[23px]"/>
                 <MobInfoList class="mb-[23px]"/>
                 <MobAddressInfo/>
+
                 <MobSocialList :label="true" class="mt-auto"/>
+
             </div>
         </div>
     </Transition>
 </template>
 
 <script setup lang="ts">
+    import { useHeaderStore } from '@/stores/header'
     import MobInfoList from '@/components/nav/MobInfoList.vue';
     import MobNavList from '@/components/nav/MobNavList.vue';
     import MobAddressInfo from '@/components/nav/MobAddressInfo.vue';
     import MobSocialList from '@/components/nav/MobSocialList.vue';
-    import { useHeaderStore } from '@/stores/header'
+    import LangSelect from '@/components/ui/LangSelect.vue'
 
     const headerStore = useHeaderStore()
 </script>

@@ -14,7 +14,9 @@
                     </NuxtLink>
 
                 </div>
+
                 <NavInfoList class="hidden md:block flex-auto"/>
+
                 <div class="flex items-center justify-center gap-[13px]">
                     <UButton
                         class="hidden md:block"
@@ -34,6 +36,7 @@
                     </div>
                 </div>
                 <CitiesSelect v-model:open="visibleCitiesPopUp"/>
+                <LangSelect class="!hidden md:!flex" />
             </div>
         </div>
     </div>
@@ -46,6 +49,7 @@
     import BurgerBtn from '~/components/ui/BurgerBtn.vue'
     import  NavInfoList from '@/components/nav/NavInfoList.vue'
     import CitiesSelect from '@/components/popup/CitiesSelect.vue'
+    import LangSelect from '@/components/ui/LangSelect.vue'
 
     const visibleCitiesPopUp = ref<boolean>(false)
     const headerRef = ref<HTMLElement | null>(null)
