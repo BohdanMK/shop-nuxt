@@ -1,0 +1,1 @@
+export type { UserDTO } from '../../../shared/dto/user.dto';

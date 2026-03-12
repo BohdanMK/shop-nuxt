@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import express, { Application, Request, Response, NextFunction } from "express";
 import http from "http";
 import mongoose from "mongoose";
@@ -28,7 +29,7 @@ app.use(cookieParser());
 app.use(express.json());
 
 // Static
-app.use("/uploads", express.static(path.join(__dirname, "../uploads")));
+app.use('/uploads', express.static(path.resolve(process.cwd(), 'uploads')));
 
 // Routes
 app.use("/api", routes);
@@ -40,13 +41,24 @@ app.get("/api/health", (_req: Request, res: Response) => {
 // Global error handler
 app.use((err: unknown, _req: Request, res: Response, _next: NextFunction) => {
   console.error("❌ Error:", err);
-  res.status(500).json({ message: "Internal server error" });
+
+  if (err instanceof Error) {
+    const statusCode = (err as any).statusCode || 400;
+    res.status(statusCode).json({
+      success: false,
+      message: err.message
+    });
+  } else {
+    res.status(500).json({
+      success: false,
+      message: "Internal server error"
+    });
+  }
 });
 
 async function start() {
   try {
     await mongoose.connect(MONGO_URI);
-    console.log("✅ Підключено до MongoDB");
 
     const server = http.createServer(app);
 

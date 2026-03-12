@@ -1,4 +1,4 @@
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 import { defineStore } from 'pinia'
 import type { CartDTO } from '@/types/dto/cart.dto'
 import type { ProductOptionGroupDTO } from '@/types/dto/product'

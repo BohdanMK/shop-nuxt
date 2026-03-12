@@ -9,7 +9,12 @@ export type SubCategoryDocument = Document & SubCategoryDb;
 
 const SubCategorySchema = new Schema<SubCategoryDocument>(
   {
-    id: { type: String },
+    id: {
+      type: String,
+      default: function (this: SubCategoryDocument) {
+        return this._id.toString();
+      },
+    },
     title: { type: String, required: true },
     pathName: { type: String, required: true },
 

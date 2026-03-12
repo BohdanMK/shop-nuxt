@@ -1,5 +1,5 @@
 import { Schema, model, Document, Types } from 'mongoose';
-import type { CartItemDocument } from './Cart';
+
 
 export type DeliveryType = 'pickup' | 'delivery';
 export type DeliveryTime = 'in_time' | 'nearest_time';

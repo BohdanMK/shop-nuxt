@@ -1,30 +1,31 @@
-import mongoose, { Schema, model, Document, Types } from 'mongoose';
-import type { ISubCategoriesDTO, ICategoryInfoDTO } from '../dtos/subCategories';
+import { Schema, model, Document, Types } from 'mongoose';
 
-
-export type CategoryDocument = Document &
-    ICategoryInfoDTO;
-
-const ImageSchema = new Schema(
-    {
-    src: { type: String, required: true },
-    alt: { type: String }
-    },
-    { _id: false }
-);
-
+export interface CategoryDocument extends Document {
+    _id: Types.ObjectId;
+    id?: string;
+    title: string;
+    imageId: string | null;
+    image: string | null;
+    createdAt: Date;
+    updatedAt: Date;
+}
 
 const CategorySchema = new Schema<CategoryDocument>(
     {
-        id: { type: String },
-        title: { type: String, required: true },
-        image: { type: ImageSchema, required: true },
+        id: {
+            type: String,
+            default: function(this: CategoryDocument) {
+                return this._id.toString();
+            }
+        },
+        title: { type: String, required: true, trim: true },
+        imageId: { type: String, default: null },
+        image: { type: String, default: null },
     },
     {
-        timestamps: true
+        timestamps: true,
+        collection: 'categories',
     }
 );
-
-
 
 export const CategoryModel = model<CategoryDocument>('Category', CategorySchema);

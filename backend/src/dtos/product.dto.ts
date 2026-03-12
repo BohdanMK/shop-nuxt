@@ -1,1 +1,6 @@
-export type { ProductDTO, ProductOptionGroupDTO, ProductOptionValueDTO } from '../../../shared/dto/product.dto';
+export type {
+	ProductDTO,
+	ProductOptionGroupDTO,
+	ProductOptionGroupType,
+	ProductOptionValueDTO
+} from '../../../shared/dto/product.dto';

@@ -1,0 +1,239 @@
+<!-- Group 1 -->
+1. Computer - Комп'ютер
+2. Software - Програмне забезпечення
+3. Hardware - Апаратне забезпечення
+4. Network - Мережа
+5. Server - Сервер
+6. Database - База даних
+7. Code - Код
+8. Program - Програма
+9. Security - Безпека
+10. System - Система
+
+<!-- Group 2 -->
+11. Developer - Розробник
+12. Engineer - Інженер
+13. Programmer - Програміст
+14. Administrator - Адміністратор
+15. Analyst - Аналітик
+16. Tester - Тестувальник
+17. Support - Підтримка
+18. Manager - Менеджер
+19. Team - Команда
+20. Project - Проект
+
+<!-- Group 3 -->
+21. Bug - Помилка
+22. Debug - Виправляти помилки
+23. Update - Оновлення
+24. Upgrade - Модернізація
+25. Install - Встановлювати
+26. Configure - Налаштовувати
+27. Deploy - Розгортати
+28. Maintain - Підтримувати
+29. Monitor - Моніторити
+30. Backup - Резервна копія
+
+<!-- Group 4 -->
+31. Cloud - Хмара
+32. Storage - Зберігання
+33. Firewall - Брандмауер
+34. Encryption - Шифрування
+35. Password - Пароль
+36. User - Користувач
+37. Access - Доступ
+38. Permission - Дозвіл
+39. Login - Увійти
+40. Logout - Вийти
+
+<!-- Group 5 -->
+41. Interface - Інтерфейс
+42. Website - Вебсайт
+43. Browser - Браузер
+44. HTML - HTML
+45. CSS - CSS
+46. JavaScript - JavaScript
+47. Python - Python
+48. Java - Java
+49. C++ - C++
+50. SQL - SQL
+
+<!-- Group 6 -->
+51. API - API
+52. Framework - Фреймворк
+53. Library - Бібліотека
+54. Algorithm - Алгоритм
+55. Data - Дані
+56. File - Файл
+57. Folder - Папка
+58. Script - Скрипт
+59. Version - Версія
+60. Patch - Платіжка
+
+<!-- Group 7 -->
+61. Performance - Продуктивність
+62. Speed - Швидкість
+63. Error - Помилка
+64. Crash - Аварія
+65. Recovery - Відновлення
+66. Log - Журнал
+67. Traffic - Трафік
+68. Bandwidth - Пропускна здатність
+69. Latency - Затримка
+70. Scalability - Масштабованість
+
+<!-- Group 8 -->
+71. Testing - Тестування
+72. Unit - Юніт
+73. Integration - Інтеграція
+74. Automation - Автоматизація
+75. Manual - Ручний
+76. Report - Звіт
+77. Documentation - Документація
+78. Requirement - Вимога
+79. Feature - Функція
+80. Bugfix - Виправлення помилок
+
+<!-- Group 9 -->
+81. Agile - Agile
+82. Scrum - Scrum
+83. Sprint - Спринт
+84. Kanban - Kanban
+85. Task - Завдання
+86. Deadline - Термін
+87. Priority - Пріоритет
+88. Workflow - Робочий процес
+89. Collaboration - Співпраця
+90. Feedback - Відгук
+
+<!-- Group 10 -->
+91. DevOps - DevOps
+92. CI/CD - CI/CD
+93. Build - Збірка
+94. Release - Реліз
+95. Rollback - Відкат
+96. Deployment - Розгортання
+97. Infrastructure - Інфраструктура
+98. Virtual - Віртуальний
+99. Container - Контейнер
+100. Docker - Docker
+
+<!-- Group 11 -->
+101. Kubernetes - Kubernetes
+102. Linux - Linux
+103. Windows - Windows
+104. MacOS - MacOS
+105. Terminal - Термінал
+106. Command - Команда
+107. Script - Скрипт
+108. Tool - Інструмент
+109. Platform - Платформа
+110. Application - Застосунок
+
+<!-- Group 12 -->
+111. Mobile - Мобільний
+112. App - Додаток
+113. Design - Дизайн
+114. UI - Інтерфейс користувача
+115. UX - Досвід користувача
+116. Prototype - Прототип
+117. Wireframe - Каркас
+118. Responsive - Адаптивний
+119. Layout - Макет
+120. Icon - Іконка
+
+<!-- Group 13 -->
+121. Serverless - Безсервери
+122. Function - Функція
+123. Event - Подія
+124. Trigger - Тригер
+125. Queue - Черга
+126. Stream - Потік
+127. Cache - Кеш
+128. Load - Навантаження
+129. Balance - Баланс
+130. Failover - Резервування
+
+<!-- Group 14 -->
+131. VPN - VPN
+132. Proxy - Проксі
+133. IP - IP-адреса
+134. DNS - DNS
+135. Router - Маршрутизатор
+136. Switch - Коммутатор
+137. Cable - Кабель
+138. Wireless - Бездротовий
+139. Signal - Сигнал
+140. Connection - З'єднання
+
+<!-- Group 15 -->
+141. Troubleshooting - Усунення проблем
+142. Diagnostic - Діагностика
+143. Resolution - Розв'язання
+144. Ticket - Тікет
+145. Incident - Інцидент
+146. Alert - Попередження
+147. Notification - Сповіщення
+148. Policy - Політика
+149. Compliance - Відповідність
+150. Audit - Аудит
+
+<!-- Group 16 -->
+151. Risk - Ризик
+152. Threat - Загроза
+153. Vulnerability - Уразливість
+154. Malware - Зловмисне ПО
+155. Virus - Вірус
+156. Phishing - Фішинг
+157. Firewall - Брандмауер
+158. Antivirus - Антивірус
+159. Encryption - Шифрування
+160. Authentication - Аутентифікація
+
+<!-- Group 17 -->
+161. Authorization - Авторизація
+162. Role - Роль
+163. User - Користувач
+164. Admin - Адміністратор
+165. Guest - Гість
+166. Session - Сесія
+167. Token - Токен
+168. Key - Ключ
+169. Certificate - Сертифікат
+170. Signature - Підпис
+
+<!-- Group 18 -->
+171. Analytics - Аналітика
+172. Report - Звіт
+173. Dashboard - Панель
+174. Metric - Метрика
+175. Trend - Тренд
+176. Forecast - Прогноз
+177. Query - Запит
+178. Filter - Фільтр
+179. Sort - Сортування
+180. Aggregate - Агрегація
+
+<!-- Group 19 -->
+181. Machine - Машина
+182. Learning - Навчання
+183. AI - Штучний інтелект
+184. Model - Модель
+185. Training - Тренування
+186. Dataset - Набір даних
+187. Prediction - Прогноз
+188. Accuracy - Точність
+189. Error - Помилка
+190. Optimization - Оптимізація
+
+<!-- Group 20 -->
+191. Blockchain - Блокчейн
+192. Transaction - Транзакція
+193. Ledger - Реєстр
+194. Hash - Хеш
+195. Wallet - Гаманець
+196. Crypto - Криптовалюта
+197. Node - Вузол
+198. Consensus - Консенсус
+199. Smart - Смарт
+200. Contract - Контракт

@@ -3,5 +3,6 @@ import 'express';
 declare module 'express-serve-static-core' {
   interface Request {
     cartId?: string;
+    userId?: string;
   }
 }

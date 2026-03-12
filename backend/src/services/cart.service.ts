@@ -33,7 +33,7 @@ export type UpdateCartItemInput = {
   quantity: number;
 };
 
-/* ───────── get cart (не створює) ───────── */
+/* ───────── get cart  ───────── */
 export async function getCart(cartId?: string): Promise<CartDocument | null> {
 
     if (!cartId || !Types.ObjectId.isValid(cartId)) return null;

@@ -1,4 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import { defineNuxtConfig } from 'nuxt/config';
 import i18nConfig from './app/i18n/config';
 import tailwindcss from "@tailwindcss/vite";
 

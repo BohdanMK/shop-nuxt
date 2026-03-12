@@ -84,7 +84,6 @@ export const useApiClient = () => {
   }
 }
 
-// Хелпери для швидкого доступу
 export const usePublicApi = () => useApiClient().publicClient
 // export const usePrivateApi = () => useApiClient().privateClient
 // export const useUploadApi = () => useApiClient().uploadClient
