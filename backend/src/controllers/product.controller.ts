@@ -24,7 +24,9 @@ export const getProductsHandler = async (
       categoryId,
       subCategoryId,
       isOnSale,
-      search
+      search,
+      sortBy,
+      sortOrder,
     } = req.query;
 
     const filters: GetProductsFilters = {};
@@ -58,6 +60,34 @@ export const getProductsHandler = async (
 
     if (typeof search === 'string' && search.trim()) {
       filters.search = search.trim();
+    }
+
+    if (typeof sortBy === 'string') {
+      const normalizedSortBy = sortBy.trim().toLowerCase();
+
+      if (
+        normalizedSortBy === 'createdat' ||
+        normalizedSortBy === 'title' ||
+        normalizedSortBy === 'price' ||
+        normalizedSortBy === 'saleprice'
+      ) {
+        const mappedSortBy =
+          normalizedSortBy === 'createdat'
+            ? 'createdAt'
+            : normalizedSortBy === 'saleprice'
+              ? 'salePrice'
+              : normalizedSortBy;
+
+        filters.sortBy = mappedSortBy;
+      }
+    }
+
+    if (typeof sortOrder === 'string') {
+      const normalizedSortOrder = sortOrder.trim().toLowerCase();
+
+      if (normalizedSortOrder === 'asc' || normalizedSortOrder === 'desc') {
+        filters.sortOrder = normalizedSortOrder;
+      }
     }
 
     const result = await getProducts(filters);

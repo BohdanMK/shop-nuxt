@@ -7,8 +7,7 @@ import authRoutes from './auth.routers';
 import profileRoutes from './profile.routes';
 import uploadsRoutes from './uploads.routes';
 import productOptionsRoutes from './productOptions.routes';
-
-
+import userRoutes from './user.routes';
 
 const router = Router();
 
@@ -21,5 +20,6 @@ router.use('/auth', authRoutes);
 router.use('/profile', profileRoutes);
 router.use('/uploads', uploadsRoutes);
 router.use('/product-options', productOptionsRoutes);
+router.use('/users', userRoutes);
 
 export default router;

@@ -15,6 +15,8 @@ export interface GetProductsFilters {
   subCategoryId?: string;
   isOnSale?: boolean;
   search?: string; // пошук по title
+  sortBy?: 'createdAt' | 'title' | 'price' | 'salePrice';
+  sortOrder?: 'asc' | 'desc';
 }
 
 export interface CreateProductPayload {
@@ -638,7 +640,9 @@ export const getProducts = async (
     categoryId,
     subCategoryId,
     isOnSale,
-    search
+    search,
+    sortBy = 'createdAt',
+    sortOrder = 'desc',
   } = filters;
 
   const safePage = page < 1 ? 1 : page;
@@ -668,9 +672,27 @@ export const getProducts = async (
     query.title = { $regex: search.trim(), $options: 'i' };
   }
 
+  const sortFieldMap: Record<NonNullable<GetProductsFilters['sortBy']>, string> = {
+    createdAt: 'createdAt',
+    title: 'title',
+    price: 'price.amount',
+    salePrice: 'salePrice',
+  };
+
+  const resolvedSortField = sortFieldMap[sortBy] ?? 'createdAt';
+  const resolvedSortOrder: 1 | -1 = sortOrder === 'asc' ? 1 : -1;
+
+  const sortQuery: Record<string, 1 | -1> = {
+    [resolvedSortField]: resolvedSortOrder,
+  };
+
+  if (resolvedSortField !== 'createdAt') {
+    sortQuery.createdAt = -1;
+  }
+
   const [docs, total] = await Promise.all([
     ProductModel.find(query)
-      .sort({ createdAt: -1 })
+      .sort(sortQuery)
       .skip((safePage - 1) * safeLimit)
       .limit(safeLimit),
     ProductModel.countDocuments(query)

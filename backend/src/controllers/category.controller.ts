@@ -14,6 +14,34 @@ export const getCategories = async (
   }
 };
 
+export const getAdminCategories = async (
+  req: Request,
+  res: Response,
+  next: NextFunction,
+) => {
+  try {
+    const page = req.query.page ? Number(req.query.page) : 1;
+    const limit = req.query.limit ? Number(req.query.limit) : 10;
+    const sortBy = (req.query.sortBy as string) ?? 'title';
+    const sortOrder = req.query.sortOrder === 'desc' ? 'desc' : 'asc';
+    const search = req.query.search as string | undefined;
+    const status = req.query.status as 'active' | 'inactive' | undefined;
+
+    const result = await categoryService.getAdminCategories({
+      page,
+      limit,
+      sortBy,
+      sortOrder,
+      ...(search !== undefined && { search }),
+      ...(status !== undefined && { status }),
+    });
+
+    res.status(200).json(result);
+  } catch (err) {
+    next(err);
+  }
+};
+
 export const getCategoryById = async (
   req: Request,
   res: Response,

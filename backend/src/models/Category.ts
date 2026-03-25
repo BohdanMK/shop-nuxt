@@ -6,6 +6,7 @@ export interface CategoryDocument extends Document {
     title: string;
     imageId: string | null;
     image: string | null;
+    status: 'active' | 'inactive';
     createdAt: Date;
     updatedAt: Date;
 }
@@ -21,6 +22,7 @@ const CategorySchema = new Schema<CategoryDocument>(
         title: { type: String, required: true, trim: true },
         imageId: { type: String, default: null },
         image: { type: String, default: null },
+        status: { type: String, enum: ['active', 'inactive'], default: 'active' },
     },
     {
         timestamps: true,

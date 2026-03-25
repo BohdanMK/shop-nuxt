@@ -134,16 +134,16 @@ export async function updateCartItem(
 
   const quantity = Number(input.quantity);
 
-  // if (!Number.isInteger(quantity) || quantity < 1) {
-  //   throw new Error('Invalid quantity');
-  // }
+  if (!Number.isInteger(quantity) || quantity < 1) {
+    throw new Error('Invalid quantity');
+  }
 
   const item = cart.items.id(input.cartItemId);
   if (!item) {
     throw new Error(`Cart item not found: ${input.cartItemId}`);
   }
 
-  item.quantity += 1;
+  item.quantity = quantity;
 
   cart.totalPrice = calculateTotal(cart.items);
   await cart.save();

@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import authMiddleware from '../middlewares/auth.middleware';
-import { createCategory, deleteCategory, getCategories, getCategoryById, updateCategory } from '../controllers/category.controller';
+import { createCategory, deleteCategory, getAdminCategories, getCategories, getCategoryById, updateCategory } from '../controllers/category.controller';
 import {
 	createSubCategory,
 	deleteSubCategory,
@@ -12,7 +12,7 @@ const router = Router();
 
 // GET /categories
 router.get('/', getCategories);
-router.get('/admin', authMiddleware,  getCategories);
+router.get('/admin', authMiddleware, getAdminCategories);
 router.post('/admin/create', authMiddleware, createCategory);
 router.patch('/admin/:categoryId/update', authMiddleware, updateCategory);
 router.delete('/admin/:categoryId/delete', authMiddleware, deleteCategory);

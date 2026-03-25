@@ -14,6 +14,23 @@ export interface UpdateCategoryPayload {
   image?: string | null;
 }
 
+export interface GetAdminCategoriesOptions {
+  page?: number;
+  limit?: number;
+  sortBy?: string;
+  sortOrder?: 'asc' | 'desc';
+  search?: string;
+  status?: 'active' | 'inactive';
+}
+
+export interface PaginatedCategories {
+  items: CategoryDocument[];
+  total: number;
+  page: number;
+  limit: number;
+  totalPages: number;
+}
+
 const createHttpError = (message: string, statusCode: number): Error & { statusCode: number } => {
   const error = new Error(message) as Error & { statusCode: number };
   error.statusCode = statusCode;
@@ -49,6 +66,38 @@ const normalizeImagePath = (image: string | null): string | null => {
 class CategoryService {
   async getAllCategories(): Promise<CategoryDocument[]> {
     return CategoryModel.find().lean();
+  }
+
+  async getAdminCategories(options: GetAdminCategoriesOptions = {}): Promise<PaginatedCategories> {
+    const page = options.page ?? 1;
+    const limit = options.limit ?? 10;
+    const sortBy = options.sortBy ?? 'title';
+    const sortOrder = options.sortOrder === 'desc' ? -1 : 1;
+    const skip = (page - 1) * limit;
+
+    const filter: Record<string, unknown> = {};
+
+    if (options.search) {
+      filter.title = { $regex: options.search, $options: 'i' };
+    }
+
+    if (options.status) {
+      filter.status = options.status;
+    }
+
+    const [items, total] = await Promise.all([
+      CategoryModel.find(filter).sort({ [sortBy]: sortOrder }).skip(skip).limit(limit).lean(),
+      CategoryModel.countDocuments(filter),
+    ]);
+    
+
+    return {
+      items,
+      total,
+      page,
+      limit,
+      totalPages: Math.ceil(total / limit),
+    };
   }
 
   async getCategoryById(categoryId: string): Promise<CategoryDocument> {
