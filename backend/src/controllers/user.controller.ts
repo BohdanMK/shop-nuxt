@@ -7,12 +7,22 @@ export const getUsersController = async (req: Request, res: Response, next: Next
     const limit = req.query.limit ? Number(req.query.limit) : 10;
     const search = req.query.search as string | undefined;
     const role = req.query.role as 'admin' | 'user' | 'moderator' | undefined;
-    console.log('Get Users Query:', { page, limit, search, role });
+    const sortByRaw = req.query.sortBy as string | undefined;
+    const sortOrderRaw = req.query.sortOrder as string | undefined;
+
+    const allowedSortBy = ['createdAt', 'name', 'email'] as const;
+    const sortBy = allowedSortBy.includes(sortByRaw as (typeof allowedSortBy)[number])
+      ? (sortByRaw as (typeof allowedSortBy)[number])
+      : undefined;
+    const sortOrder = sortOrderRaw === 'asc' ? 'asc' : sortOrderRaw === 'desc' ? 'desc' : undefined;
+
     const result = await getUsers({
       page,
       limit,
       ...(search !== undefined && { search }),
       ...(role !== undefined && { role }),
+      ...(sortBy !== undefined && { sortBy }),
+      ...(sortOrder !== undefined && { sortOrder }),
     });
 
     res.status(200).json(result);

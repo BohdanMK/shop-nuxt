@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col xs:flex-row gap-[10px] items-center bg-[var(--card-black-bg)]">
     <div class="w-full xs:w-[230px] h-full">
-      <img class="w-full" :src="item.mainImg" :alt="item.name || $t('locations.locationAlt')" />
+      <img class="w-full" :src="item.mainImg.src" :alt="item.mainImg.alt || item.name || $t('locations.locationAlt')" />
     </div>
     <div class="w-full xs:w-auto flex flex-col justify-start items-start px-[10px] xs:px-[0px]">
       <h6 class="mb-[4px] text-[12px] font-regular text-start">

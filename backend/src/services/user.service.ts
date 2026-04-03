@@ -13,6 +13,8 @@ export interface GetUsersOptions {
   limit?: number;
   search?: string;
   role?: 'admin' | 'user' | 'moderator';
+  sortBy?: 'createdAt' | 'name' | 'email';
+  sortOrder?: 'asc' | 'desc';
 }
 
 export interface PaginatedUsers {
@@ -59,8 +61,11 @@ export const getUsers = async (options: GetUsersOptions = {}): Promise<Paginated
     filter.role = options.role;
   }
 
+  const sortField = options.sortBy ?? 'createdAt';
+  const sortDirection = options.sortOrder === 'asc' ? 1 : -1;
+
   const [items, total] = await Promise.all([
-    User.find(filter, userFields).skip((page - 1) * limit).limit(limit).lean(),
+    User.find(filter, userFields).sort({ [sortField]: sortDirection }).skip((page - 1) * limit).limit(limit).lean(),
     User.countDocuments(filter),
   ]);
 

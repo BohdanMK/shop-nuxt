@@ -8,7 +8,10 @@ export const locations: Location[] = [
     lat: 50.4501,
     lng: 30.5234,
     address: 'вул. Хрещатик, 1',
-    mainImg: 'images/locations/location_1.png',
+    mainImg: {
+      src: 'images/locations/location_1.png',
+      alt: 'Ресторан Київ Центр'
+    },
     description: 'Основний ресторан у центрі Києва',
     images: [
       'images/locations/location_1.png',
@@ -23,7 +26,10 @@ export const locations: Location[] = [
     locationType: 'pickup',
     lat: 50.5083,
     lng: 30.4983,
-    mainImg: 'images/locations/location_1.png',
+    mainImg: {
+      src: 'images/locations/location_1.png',
+      alt: 'Самовивіз Оболонь'
+    },
     address: 'пр-т Героїв Сталінграда, 10',
     images: [
       'images/locations/location_1.png',

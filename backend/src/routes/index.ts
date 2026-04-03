@@ -8,6 +8,8 @@ import profileRoutes from './profile.routes';
 import uploadsRoutes from './uploads.routes';
 import productOptionsRoutes from './productOptions.routes';
 import userRoutes from './user.routes';
+import dashboardRoutes from './dashboard.routes';
+import locationRoutes from './location.routes';
 
 const router = Router();
 
@@ -21,5 +23,7 @@ router.use('/profile', profileRoutes);
 router.use('/uploads', uploadsRoutes);
 router.use('/product-options', productOptionsRoutes);
 router.use('/users', userRoutes);
+router.use('/dashboard', dashboardRoutes);
+router.use('/locations', locationRoutes);
 
 export default router;
