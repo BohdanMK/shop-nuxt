@@ -7,6 +7,13 @@ export interface LocationDocument extends Document, Omit<LocationDTO, '_id'> {
   updatedAt: Date;
 }
 
+const ContactPhoneSchema = new Schema(
+  {
+    value: { type: String, required: true, trim: true },
+  },
+  { _id: false },
+);
+
 const LocationSchema = new Schema<LocationDocument>(
   {
     id: { type: Number, required: true, unique: true, index: true },
@@ -23,7 +30,7 @@ const LocationSchema = new Schema<LocationDocument>(
     mapStyle: { type: String, trim: true },
     images: { type: [String], default: [] },
     schedule: { type: String, trim: true },
-    contactPhones: { type: [String], default: [] },
+    contactPhones: { type: [ContactPhoneSchema], default: [] },
   },
   {
     timestamps: true,

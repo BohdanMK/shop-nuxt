@@ -14,7 +14,7 @@ export interface CreateLocationPayload {
   mapStyle?: string;
   images?: string[];
   schedule?: string;
-  contactPhones?: string[];
+  contactPhones?: Location['contactPhones'];
 }
 
 export interface UpdateLocationPayload {
@@ -28,7 +28,7 @@ export interface UpdateLocationPayload {
   mapStyle?: string;
   images?: string[];
   schedule?: string;
-  contactPhones?: string[];
+  contactPhones?: Location['contactPhones'];
 }
 
 export interface GetAdminLocationsOptions {
@@ -100,6 +100,36 @@ const readOptionalStringArray = (value: unknown, field: string): string[] | unde
   return value.map((item, index) => readRequiredString(item, `${field}[${index}]`));
 };
 
+const readContactPhoneItem = (value: unknown, field: string): { value: string } => {
+  if (typeof value === 'string') {
+    return { value: readRequiredString(value, field) };
+  }
+
+  if (!value || typeof value !== 'object' || Array.isArray(value)) {
+    throw createHttpError(`${field} must be an object with string field "value"`, 400);
+  }
+
+  const maybePhone = value as { value?: unknown };
+  return {
+    value: readRequiredString(maybePhone.value, `${field}.value`),
+  };
+};
+
+const readOptionalContactPhoneArray = (
+  value: unknown,
+  field: string,
+): { value: string }[] | undefined => {
+  if (value === undefined || value === null) {
+    return undefined;
+  }
+
+  if (!Array.isArray(value)) {
+    throw createHttpError(`${field} must be an array`, 400);
+  }
+
+  return value.map((item, index) => readContactPhoneItem(item, `${field}[${index}]`));
+};
+
 const readRequiredMainImage = (value: unknown): Location['mainImg'] => {
   if (!value || typeof value !== 'object' || Array.isArray(value)) {
     throw createHttpError('mainImg must be an object', 400);
@@ -157,12 +187,32 @@ const normalizeMainImg = (mainImg: unknown): Location['mainImg'] => {
   return readRequiredMainImage(mainImg);
 };
 
+const normalizeContactPhones = (value: unknown): { value: string }[] => {
+  if (!Array.isArray(value)) {
+    return [];
+  }
+
+  return value
+    .map((item) => {
+      try {
+        return readContactPhoneItem(item, 'contactPhones');
+      } catch {
+        return undefined;
+      }
+    })
+    .filter((item): item is { value: string } => Boolean(item));
+};
+
 const normalizeLocationDoc = (location: LocationDocument): LocationDocument => {
   const normalizedMainImg = normalizeMainImg((location as unknown as { mainImg?: unknown }).mainImg);
+  const normalizedContactPhones = normalizeContactPhones(
+    (location as unknown as { contactPhones?: unknown }).contactPhones,
+  );
 
   return {
     ...location,
     mainImg: normalizedMainImg,
+    contactPhones: normalizedContactPhones,
   } as LocationDocument;
 };
 
@@ -229,7 +279,7 @@ class LocationService {
     const mapStyle = readOptionalString(payload.mapStyle, 'mapStyle');
     const images = readOptionalStringArray(payload.images, 'images');
     const schedule = readOptionalString(payload.schedule, 'schedule');
-    const contactPhones = readOptionalStringArray(payload.contactPhones, 'contactPhones');
+    const contactPhones = readOptionalContactPhoneArray(payload.contactPhones, 'contactPhones');
 
     let id = payload.id;
 
@@ -314,7 +364,7 @@ class LocationService {
     }
 
     if ('contactPhones' in payload) {
-      updateData.contactPhones = readOptionalStringArray(payload.contactPhones, 'contactPhones');
+      updateData.contactPhones = readOptionalContactPhoneArray(payload.contactPhones, 'contactPhones');
     }
 
     const updatedLocation = await LocationModel.findOneAndUpdate(identityQuery, updateData, {
