@@ -10,7 +10,7 @@
             <div class="flex items-center gap-2 justify-between md:justify-start">
                 <div>
                     <NuxtLink to="/">
-                        <img src="@/assets/images/mob_logo.png" :alt="$t('common.logoAlt')" class="w-[104px] h-[69px]" />
+                        <NuxtImg src="/images/mob_logo.png" :alt="$t('common.logoAlt')" class="w-[104px] h-[69px]" />
                     </NuxtLink>
 
                 </div>
@@ -52,7 +52,6 @@
 
 <script setup lang="ts">
     import { ref, onMounted, onBeforeUnmount } from 'vue'
-    import { useHeaderStore } from '@/stores/header'
     import PhoneSelect from '@/components/ui/PhoneSelect.vue'
     import BurgerBtn from '~/components/ui/BurgerBtn.vue'
     import  NavInfoList from '@/components/nav/NavInfoList.vue'

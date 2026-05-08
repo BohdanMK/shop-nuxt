@@ -15,7 +15,7 @@
                 </UButton>
                 <div class="w-full max-w-[305px] md:max-w-[405px] mx-auto bg-[var(--card-black-bg)] rounded-[5px] py-[20px] overflow-hidden">
                 <div class="flex justify-center mx-auto text-center mb-[15px]">
-                    <img src="@/assets/images/mob_logo.png" :alt="$t('common.logoAlt')" class="w-[104px] h-[69px]" />
+                    <NuxtImg src="/images/mob_logo.png" :alt="$t('common.logoAlt')" class="w-[104px] h-[69px]" />
                 </div>
                     <h5 class="mx-auto text-center font-bold text-[16px] mb-[20px]">
                         {{ $t('locations.selectCity') }}

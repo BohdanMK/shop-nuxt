@@ -27,7 +27,7 @@
             activeCategory === item._id
         }"
       >
-        <img :src="item.image" class="w-[70px] h-[40px] rounded-lg" />
+        <NuxtImg :src="useImageSrc(item.image)" class="w-[70px] h-10 rounded-lg" :alt="item.title" />
         <h4 class="whitespace-nowrap text-center text-[14px]">
           {{ item.title }}
         </h4>
@@ -40,7 +40,7 @@
   import { computed } from 'vue'
   import { useRoute } from 'vue-router'
   import { useCategoriesStore } from '@/stores/categories'
-  
+
 
   const categoriesStore = useCategoriesStore()
   const route = useRoute()

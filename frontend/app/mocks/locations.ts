@@ -18,7 +18,7 @@ export const locations: Location[] = [
       'images/locations/location_1.png'
     ],
     schedule: ' Прийом замовлень: <br>  На доставку з 10:00 до 20:45 <br>  На самовивіз з 10:00 до 20:45 <br>  Без вихідних ',
-    contactPhones: ['0945522312', '0945522312']
+    contactPhones: [{ value: '0945522312' }, { value: '0945522312' }]
   },
   {
     id: 2,
@@ -36,6 +36,6 @@ export const locations: Location[] = [
       'images/locations/location_1.png'
     ],
     schedule: ' Прийом замовлень: <br>  На доставку з 10:00 до 20:45 <br>  На самовивіз з 10:00 до 20:45 <br>  Вихідні: Сб, Нд ',
-    contactPhones: ['0945522310']
+    contactPhones: [{ value: '0945522310' }]
   }
 ]

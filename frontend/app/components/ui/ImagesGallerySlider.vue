@@ -20,8 +20,8 @@
             class="w-full aspect-video overflow-hidden rounded-lg"
             @click="openLightbox(index)"
           >
-            <img
-              :src="item"
+            <NuxtImg
+              :src="useImageSrc(item)"
               class="w-full h-full object-cover"
               :alt="$t('gallery.photoAlt', { index: index + 1 })"
             />

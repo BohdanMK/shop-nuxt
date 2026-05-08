@@ -3,7 +3,7 @@
         <h4 v-if="label">{{ $t('social.weAreIn') }}</h4>
         <ul>
             <a href="#">
-                <img src="@/assets/images/facebook.svg"/>
+                <NuxtImg src="/images/facebook.svg" class="inline-block" alt="Facebook" />
             </a>
         </ul>
     </div>

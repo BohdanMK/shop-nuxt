@@ -11,7 +11,7 @@
             fullWidth && 'max-w-full overflow-hidden'
         ]"
         >
-            <img ref="productImg" class="w-full" :src="product.image.src" :alt="product.image.alt ?? product.title" />
+            <NuxtImg ref="productImg" class="w-full" :src="useImageSrc(product.image.src)" :alt="product.image.alt ?? product.title" />
         </div>
 
         <div class="mt-[5px] mx-[11px] pb-[15px]">
@@ -52,7 +52,7 @@
                         class="w-[55px]"
                         >
                         <div class="w-[55px] h-[38px]">
-                            <img class="w-full" :src="comp.image.src" :alt="comp.image.alt ?? comp.name" />
+                            <NuxtImg class="w-full" :src="useImageSrc(comp.image.src)" :alt="comp.image.alt ?? comp.name" />
                         </div>
                         <h6 class="h-[15px] text-[10px] font-regular text-center">{{ comp.name }}</h6>
                         </li>
@@ -106,7 +106,7 @@
 </template>
 
 <script setup lang="ts">
-    import { onMounted, ref, computed, toRefs, inject } from 'vue'
+    import { onMounted, ref, computed, toRefs, inject, type ComponentPublicInstance } from 'vue'
     import type { ProductDTO } from '@/types/dto/product'
     import { useCartStore } from '@/stores/cart'
     import CardOptionsPopUp from '@/components/product/CardOptionsPopUp.vue'
@@ -117,7 +117,7 @@
     }>()
 
     const addToCartButtonRef = ref<HTMLButtonElement | null>(null)
-    const productImg = ref<HTMLImageElement | null>(null)
+    const productImg = ref<HTMLElement | ComponentPublicInstance | null>(null)
 
     const cartStore = useCartStore()
 
@@ -168,12 +168,13 @@
 
         if (!imgElement || !buttonElement || !cartButtonRef?.value) return
 
-        // Отримуємо координати
-        const imgRect = imgElement.getBoundingClientRect()
+        const sourceElement = imgElement instanceof HTMLElement ? imgElement : (imgElement as any)?.$el
+        if (!sourceElement || !(sourceElement instanceof HTMLElement)) return
+
+        const imgRect = sourceElement.getBoundingClientRect()
         const cartRect = cartButtonRef.value.getBoundingClientRect()
 
-        // Створюємо клон зображення
-        const imgClone = imgElement.cloneNode(true) as HTMLImageElement
+        const imgClone = sourceElement.cloneNode(true) as HTMLElement
         imgClone.style.position = 'fixed'
         imgClone.style.top = imgRect.top + 'px'
         imgClone.style.left = imgRect.left + 'px'

@@ -29,7 +29,7 @@
                 </div>
 
                 <div class="w-[260px] h-[208px] md:w-[360px] md:h-[308px]">
-                    <img :src="item.image" class="rounded-lg w-full h-[inherit]" />
+                    <NuxtImg :src="item.image" class="rounded-lg w-full h-[inherit]" :alt="item.title" />
                 </div>
             </div>
             </div>

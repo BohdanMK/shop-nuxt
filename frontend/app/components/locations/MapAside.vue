@@ -8,8 +8,8 @@
         v-if="selectedLocation"
         class="flex-auto text-[var(--main-text-color)]"
       >
-        <FullscreenLightBox :images="selectedLocation.images" />
-        <ImagesGallerySlider :images="selectedLocation.images" />
+        <FullscreenLightBox :images="locationImages" />
+        <ImagesGallerySlider :images="locationImages" />
 
         <h2 class="text-lg font-semibold">
           {{ selectedLocation.name }}
@@ -48,11 +48,11 @@
 
           <a
             v-for="(phone, index) in selectedLocation.contactPhones"
-            :key="phone + index"
-            :href="`tel:${phone}`"
+            :key="phone.value + index"
+            :href="`tel:${phone.value}`"
             class="mx-1 my-0 text-[var(--main-red)]"
           >
-            {{ phone }}
+            {{ phone.value }}
           </a>
         </p>
       </div>
@@ -113,6 +113,12 @@
     }
 
     const props = defineProps<Props>()
+
+    const locationImages = computed(() => {
+        if (!props.selectedLocation) return []
+        const imgs = props.selectedLocation.images ?? []
+        return imgs.length ? imgs : [props.selectedLocation.mainImg.src]
+    })
 
     const emit = defineEmits<{
         (e: 'build-route'): void

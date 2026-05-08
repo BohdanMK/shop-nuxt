@@ -2,7 +2,7 @@
     <div class="pb-2 border-b border-[var(--border-muted)]">
         <div class="flex gap-2 mb-[10px]">
             <div class="w-full max-w-[85px] rounded-sm overflow-hidden">
-                <img
+                <NuxtImg
                     :src="item.image.src"
                     :alt="item.image.alt ?? item.title"
                     class="w-full h-auto"

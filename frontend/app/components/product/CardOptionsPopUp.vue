@@ -12,7 +12,7 @@
                             'w-full relative  max-w-[305px] max-h-[203px]'
                         ]"
                         >
-                            <img class="w-full" :src="product.image.src" :alt="product.image.alt ?? product.title" />
+                            <NuxtImg class="w-full" :src="useImageSrc(product.image.src)" :alt="product.image.alt ?? product.title" />
                             <UButton
                                 class="burger-btn  flex flex-col justify-center items-center w-8 h-8 gap-1.5 bg-[var(--card-black-bg)] border-y-0 border-x border-x-[#ff0000] rounded-[5px] absolute top-3 end-3"
 
