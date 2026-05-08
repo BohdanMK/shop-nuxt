@@ -1,5 +1,7 @@
 import { Types, FilterQuery } from 'mongoose';
 import { ProductModel, ProductDocument } from '../models/Product';
+import { createHttpError } from '../utils/httpError';
+import { isRecord, readRequiredString, readOptionalString, readBoolean, readNonNegativeInteger, slugify } from '../utils/parsing';
 import type {
   ProductDTO,
   ProductOptionGroupDTO,
@@ -87,60 +89,9 @@ type ParsedUpdateOptionGroupPayload = {
   values?: ProductOptionValueDTO[];
 };
 
-const createHttpError = (message: string, statusCode: number): Error & { statusCode: number } => {
-  const error = new Error(message) as Error & { statusCode: number };
-  error.statusCode = statusCode;
-  return error;
-};
-
-const isRecord = (value: unknown): value is Record<string, unknown> =>
-  value !== null && typeof value === 'object' && !Array.isArray(value);
-
-const readRequiredString = (value: unknown, field: string): string => {
-  if (typeof value !== 'string') {
-    throw createHttpError(`${field} must be a string`, 400);
-  }
-
-  const trimmed = value.trim();
-  if (!trimmed) {
-    throw createHttpError(`${field} is required`, 400);
-  }
-
-  return trimmed;
-};
-
-const readOptionalString = (value: unknown, field: string): string | undefined => {
-  if (value === undefined || value === null) {
-    return undefined;
-  }
-
-  if (typeof value !== 'string') {
-    throw createHttpError(`${field} must be a string`, 400);
-  }
-
-  const trimmed = value.trim();
-  return trimmed || undefined;
-};
-
 const readNonNegativeNumber = (value: unknown, field: string): number => {
   if (typeof value !== 'number' || !Number.isFinite(value) || value < 0) {
     throw createHttpError(`${field} must be a non-negative number`, 400);
-  }
-
-  return value;
-};
-
-const readNonNegativeInteger = (value: unknown, field: string): number => {
-  if (typeof value !== 'number' || !Number.isInteger(value) || value < 0) {
-    throw createHttpError(`${field} must be a non-negative integer`, 400);
-  }
-
-  return value;
-};
-
-const readBoolean = (value: unknown, field: string): boolean => {
-  if (typeof value !== 'boolean') {
-    throw createHttpError(`${field} must be a boolean`, 400);
   }
 
   return value;
@@ -153,13 +104,6 @@ const readOptionGroupType = (value: unknown, field: string): ProductOptionGroupT
 
   return value;
 };
-
-const slugify = (value: string): string =>
-  value
-    .toLowerCase()
-    .trim()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-+|-+$/g, '');
 
 const parseImage = (value: unknown, field: string): ProductDTO['image'] => {
   if (!isRecord(value)) {

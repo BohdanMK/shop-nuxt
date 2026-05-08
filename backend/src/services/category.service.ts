@@ -1,6 +1,7 @@
 
 import { CategoryModel, CategoryDocument } from '../models/Category';
 import { Types } from 'mongoose';
+import { createHttpError } from '../utils/httpError';
 
 export interface CreateCategoryPayload {
   title: string;
@@ -30,12 +31,6 @@ export interface PaginatedCategories {
   limit: number;
   totalPages: number;
 }
-
-const createHttpError = (message: string, statusCode: number): Error & { statusCode: number } => {
-  const error = new Error(message) as Error & { statusCode: number };
-  error.statusCode = statusCode;
-  return error;
-};
 
 const normalizeNullableString = (value: unknown): string | null => {
   if (typeof value !== 'string') {

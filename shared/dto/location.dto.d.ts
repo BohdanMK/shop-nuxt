@@ -19,5 +19,5 @@ export interface Location {
     mapStyle?: string,
     images?: LocationImage[],
     schedule?: string,
-    contactPhones?: string[]
+    contactPhones?: { value: string }[]
 }

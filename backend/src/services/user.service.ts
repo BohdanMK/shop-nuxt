@@ -1,12 +1,8 @@
 import bcrypt from 'bcrypt';
 import { Types } from 'mongoose';
 import { User, UserDocument } from '../models/User';
+import { createHttpError } from '../utils/httpError';
 
-const createHttpError = (message: string, statusCode: number): Error & { statusCode: number } => {
-  const error = new Error(message) as Error & { statusCode: number };
-  error.statusCode = statusCode;
-  return error;
-};
 
 export interface GetUsersOptions {
   page?: number;

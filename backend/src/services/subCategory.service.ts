@@ -2,6 +2,8 @@
 import { Types } from 'mongoose';
 import { SubCategoryModel } from '../models/SubCategory';
 import { CategoryModel } from '../models/Category';
+import { createHttpError } from '../utils/httpError';
+import { slugify } from '../utils/parsing';
 
 export interface CreateSubCategoryPayload {
     title: string;
@@ -10,27 +12,6 @@ export interface CreateSubCategoryPayload {
 export interface UpdateSubCategoryPayload {
     title?: string;
 }
-
-const createHttpError = (message: string, statusCode: number): Error & { statusCode: number } => {
-    const error = new Error(message) as Error & { statusCode: number };
-    error.statusCode = statusCode;
-    return error;
-};
-
-const slugify = (value: string): string => {
-    const normalized = value
-        .normalize('NFKD')
-        .replace(/[\u0300-\u036f]/g, '')
-        .toLowerCase()
-        .replace(/[^a-z0-9]+/g, '-')
-        .replace(/^-+|-+$/g, '');
-
-    if (normalized) {
-        return normalized;
-    }
-
-    return `subcategory-${Date.now()}`;
-};
 
 const escapeRegex = (value: string): string => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
@@ -64,7 +45,7 @@ export const createSubCategoryByCategoryId = async (
         throw createHttpError('Category not found', 404);
     }
 
-    const pathName = slugify(title);
+    const pathName = slugify(title) || `subcategory-${Date.now()}`;
     const titleRegex = new RegExp(`^${escapeRegex(title)}$`, 'i');
 
     const existingSubCategory = await SubCategoryModel.findOne({
@@ -117,7 +98,7 @@ export const updateSubCategoryByCategoryId = async (
             throw createHttpError('Subcategory title is required', 400);
         }
 
-        const pathName = slugify(title);
+        const pathName = slugify(title) || `subcategory-${Date.now()}`;
         const titleRegex = new RegExp(`^${escapeRegex(title)}$`, 'i');
 
         const duplicateSubCategory = await SubCategoryModel.findOne({

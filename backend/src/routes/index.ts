@@ -10,6 +10,7 @@ import productOptionsRoutes from './productOptions.routes';
 import userRoutes from './user.routes';
 import dashboardRoutes from './dashboard.routes';
 import locationRoutes from './location.routes';
+import companyInfoRoutes from './companyInfo.routes';
 
 const router = Router();
 
@@ -25,5 +26,6 @@ router.use('/product-options', productOptionsRoutes);
 router.use('/users', userRoutes);
 router.use('/dashboard', dashboardRoutes);
 router.use('/locations', locationRoutes);
+router.use('/company-info', companyInfoRoutes);
 
 export default router;

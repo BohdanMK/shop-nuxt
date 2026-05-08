@@ -1,6 +1,8 @@
 import { FilterQuery, Types } from 'mongoose';
 import type { ProductOptionGroupDTO, ProductOptionValueDTO } from '../../../shared/dto/product.dto';
 import { ProductOptionGroupModel, ProductOptionGroupDocument } from '../models/ProductOptionGroup';
+import { createHttpError } from '../utils/httpError';
+import { isRecord, readRequiredString, readOptionalString, readBoolean, readNonNegativeInteger, slugify } from '../utils/parsing';
 
 export type CreateProductOptionGroupPayload = Omit<ProductOptionGroupDTO, 'id'> & {
   id?: string;
@@ -39,57 +41,6 @@ type ParsedUpdatePayload = {
   values?: ProductOptionValueDTO[];
 };
 
-const createHttpError = (message: string, statusCode: number): Error & { statusCode: number } => {
-  const error = new Error(message) as Error & { statusCode: number };
-  error.statusCode = statusCode;
-  return error;
-};
-
-const isRecord = (value: unknown): value is Record<string, unknown> =>
-  value !== null && typeof value === 'object' && !Array.isArray(value);
-
-const readRequiredString = (value: unknown, field: string): string => {
-  if (typeof value !== 'string') {
-    throw createHttpError(`${field} must be a string`, 400);
-  }
-
-  const trimmed = value.trim();
-  if (!trimmed) {
-    throw createHttpError(`${field} is required`, 400);
-  }
-
-  return trimmed;
-};
-
-const readOptionalString = (value: unknown, field: string): string | undefined => {
-  if (value === undefined || value === null) {
-    return undefined;
-  }
-
-  if (typeof value !== 'string') {
-    throw createHttpError(`${field} must be a string`, 400);
-  }
-
-  const trimmed = value.trim();
-  return trimmed || undefined;
-};
-
-const readNonNegativeInteger = (value: unknown, field: string): number => {
-  if (typeof value !== 'number' || !Number.isInteger(value) || value < 0) {
-    throw createHttpError(`${field} must be a non-negative integer`, 400);
-  }
-
-  return value;
-};
-
-const readBoolean = (value: unknown, field: string): boolean => {
-  if (typeof value !== 'boolean') {
-    throw createHttpError(`${field} must be a boolean`, 400);
-  }
-
-  return value;
-};
-
 const readOptionGroupType = (value: unknown): ProductOptionGroupType => {
   if (value !== 'single' && value !== 'multiple') {
     throw createHttpError('type must be "single" or "multiple"', 400);
@@ -97,13 +48,6 @@ const readOptionGroupType = (value: unknown): ProductOptionGroupType => {
 
   return value;
 };
-
-const slugify = (value: string): string =>
-  value
-    .toLowerCase()
-    .trim()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-+|-+$/g, '');
 
 const parseExtraPrice = (
   value: unknown,

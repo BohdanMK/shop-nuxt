@@ -1,6 +1,8 @@
 import { FilterQuery, Types } from 'mongoose';
 import type { Location } from '../dtos/locations.dto';
 import { LocationDocument, LocationModel } from '../models/Location';
+import { createHttpError } from '../utils/httpError';
+import { readRequiredString, readOptionalString } from '../utils/parsing';
 
 export interface CreateLocationPayload {
   id?: number;
@@ -47,38 +49,6 @@ export interface PaginatedLocations {
   limit: number;
   totalPages: number;
 }
-
-const createHttpError = (message: string, statusCode: number): Error & { statusCode: number } => {
-  const error = new Error(message) as Error & { statusCode: number };
-  error.statusCode = statusCode;
-  return error;
-};
-
-const readRequiredString = (value: unknown, field: string): string => {
-  if (typeof value !== 'string') {
-    throw createHttpError(`${field} must be a string`, 400);
-  }
-
-  const trimmed = value.trim();
-  if (!trimmed) {
-    throw createHttpError(`${field} is required`, 400);
-  }
-
-  return trimmed;
-};
-
-const readOptionalString = (value: unknown, field: string): string | undefined => {
-  if (value === undefined || value === null) {
-    return undefined;
-  }
-
-  if (typeof value !== 'string') {
-    throw createHttpError(`${field} must be a string`, 400);
-  }
-
-  const trimmed = value.trim();
-  return trimmed || undefined;
-};
 
 const readNumber = (value: unknown, field: string): number => {
   if (typeof value !== 'number' || !Number.isFinite(value)) {

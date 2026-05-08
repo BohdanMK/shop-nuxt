@@ -27,6 +27,7 @@ The token is obtained via `POST /api/auth/login` and is valid for **3 hours**.
 | [profile.md](./profile.md) | `/api/profile` | Current user profile |
 | [uploads.md](./uploads.md) | `/api/uploads` | File uploads |
 | [product-options.md](./product-options.md) | `/api/product-options` | Global option groups |
+| [company-info.md](./company-info.md) | `/api/company-info` | Company public/admin settings |
 
 ---
 
